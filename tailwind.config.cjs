@@ -7,19 +7,14 @@ module.exports = {
     extend: {
       colors: {
         hs: {
-          background: "#1C2421",
-          text: "#E5EDE9",
-          secondary: "#8FA098",
-          accent: "#2D4B3E",
-          "accent-text": "#F2F7F5",
-          "accent-border": "#334D42",
-
-          link: "#7FBA9A",
-          "link-select": "#94CF96",
-
-          muted: "#2A3530",
-          "secondary-hover": "#A0B0A8",
-          "accent-hover": "#375B4B",
+          background: "#333333",
+          text: "#E5E5E5",
+          accent: "#C79A6A",
+          secondary: "#4A6E73",
+          link: "#00A8A8",
+          "link-hover": "#A0D9D9",
+          muted: "#555555",
+          "button-accent": "#8A3D3D",
         },
       },
       fontFamily: {

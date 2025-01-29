@@ -1,0 +1,103 @@
+{
+  "screenplays": [
+    {
+      "id": 1,
+      "title": "Waiting For You",
+      "duration": 91,
+      "year": 2017,
+      "release": [
+        {
+          "broadcast": {
+            "wasLiveBroadcasted": false,
+            "broadcaster": ""
+          }
+        },
+        {
+          "hardCopy": {
+            "hasHardCopy": false,
+            "format": []
+          }
+        }
+      ],
+      "cast": ["Colin Morgan", "Fanny Ardant"],
+      "artist": [""],
+      "isCowritten": true,
+      "writters": ["Hugh Stoddart", "Charles Garrad"],
+      "directors": ["Charles Garrad"],
+      "producer": ["Simon Bosanquet"],
+      "execProduction": [],
+      "musicians": [],
+      "synopsis": "Clues left by his father send a young man on a journey to France in search of truths that have been hidden from him.",
+      "media": {
+        "hasVideo": false,
+        "image": ""
+      },
+      "streaming": {
+        "isStreaming": true,
+        "available": [
+          {
+            "service": "Prime Video",
+            "path": "https://www.amazon.co.uk/gp/video/detail/amzn1.dv.gti.68ba58d0-5d71-1427-c268-8dcb0a46ab59?tag=amazon-gb-ro-mac-chr-21&token=CA3774BA60135AD0409D07C24960D3F9C54D532C"
+          },
+          {
+            "service": "Apple Tv",
+            "path": "https://tv.apple.com/gb/movie/waiting-for-you/umc.cmc.5h4w6i2n6df8uwzlafolmy0yo?playableId=tvs.sbd.9001%3A1526619980"
+          }
+        ]
+      },
+      "reviews": {
+        "hasReview": false,
+        "reviews": []
+      },
+      "awards": {
+        "hasAward": false,
+        "award": ""
+      }
+    },
+
+    {
+      "id": 2,
+      "title": "Moth Dust",
+      "duration": 9,
+      "year": 2013,
+      "release": [
+        {
+          "broadcast": {
+            "wasLiveBroadcasted": false,
+            "broadcaster": ""
+          },
+          "hardCopy": {
+            "hasHardCopy": true,
+            "format": "DVD-HD"
+          }
+        }
+      ],
+      "cast": ["Kieran Brennan", "Tessa Nicholson"],
+      "artist": ["Paul Hazelton"],
+      "isCowritten": false,
+      "writters": ["Hugh Stoddart"],
+      "directors": ["Hugh Stoddart"],
+      "producer": [],
+      "execProduction": ["Sligeach Films"],
+      "musicians": ["Julian Jacobson", "Camilia Li"],
+      "synopsis": "A crisis between lovers Mark and Sarah is revealed by dreams and a poem, echoed by Debussy's beautiful but sombre music. The film was shot in Sligo, Ireland.",
+      "media": {
+        "hasVideo": true,
+        "videoPath": "",
+        "image": ""
+      },
+      "streaming": {
+        "isStreaming": false,
+        "available": []
+      },
+      "reviews": {
+        "hasReview": false,
+        "reviews": []
+      },
+      "awards": {
+        "hasAward": false,
+        "award": ""
+      }
+    }
+  ]
+}

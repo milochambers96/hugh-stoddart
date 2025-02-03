@@ -1,7 +1,4 @@
-import {
-  writingsIntro,
-  writingsOverview,
-} from "../../../data/writings/writings";
+import { writingsIntro, writingsOverview } from "../../data/writings/writings";
 
 import WritingShellCard from "./WritingsShellCard";
 

@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Layout/Navbar";
 import Home from "./components/HomePage/Home";
 import WritingsShell from "./components/WritingsPage/WritingsShell";
+import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShell";
 import AboutShell from "./components/AboutPage/AboutShell";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Writings" element={<WritingsShell />} />
+          <Route path="/Writings/Screenplays" element={<ScreenplayShell />} />
           <Route path="/About" element={<AboutShell />} />
         </Routes>
       </div>

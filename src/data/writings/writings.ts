@@ -1,4 +1,4 @@
-import notShutUpImg from "../../src/assets/writing-page-imgs/not-shut-up-issue-7.jpg";
+import notShutUpImg from "../../assets/writing-page-imgs/not-shut-up-issue-7.jpg";
 
 export const writingsIntro =
   "Hugh Stoddart’s writing spans film, theatre, and journalism. Learn about his screenplays and theatre projects, read selected art reviews, and discover his influential magazine project featuring interviews with creative voices who have experienced prison. Explore below to find out more.";
@@ -41,7 +41,6 @@ export const writingsOverview = [
     imgAlt:
       "A cover of an edition of 'Not Shut Up'; a magazine developed by Hugh.",
     navPath: "/Writings/Prison",
-    capTxt:
-      "Selected critiques, essays, and musings on artists, exhibitions, and creative practices.",
+    capTxt: "A magazine amplifying creative voices from prison.",
   },
 ];

@@ -23,19 +23,22 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="font-semibold md:text-lg sm:text-base">
             {/* desktop navbar */}
-            <ul className="hidden md:flex justify-between text-hs-link">
-              <li>Hugh Stoddard</li>
-              {navbarItems.map((item) => (
-                <li key={item.text}>
-                  <Link
-                    to={item.path}
-                    className="hover:text-hs-link-hover transition-colors duration-500"
-                  >
-                    {item.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="hidden md:flex justify-between">
+              <p className="border italic">Hugh Stoddard</p>
+              <ul className="md:flex text-hs-link gap-60">
+                {/* <li className="font-semibold md:text-xl">Hugh Stoddard</li> */}
+                {navbarItems.map((item) => (
+                  <li key={item.text}>
+                    <Link
+                      to={item.path}
+                      className="hover:text-hs-link-hover transition-colors duration-500"
+                    >
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* mobile navbar */}
             <div className="md:hidden flex justify-end">

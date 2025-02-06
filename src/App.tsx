@@ -6,6 +6,7 @@ import Navbar from "./components/Layout/Navbar";
 import Home from "./components/HomePage/Home";
 import WritingsShell from "./components/WritingsPage/WritingsShell";
 import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShell";
+import PrisonShell from "./components/WritingsPage/Prison/PrisonShell";
 import AboutShell from "./components/AboutPage/AboutShell";
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Writings" element={<WritingsShell />} />
           <Route path="/Writings/Screenplays" element={<ScreenplayShell />} />
+          <Route path="/Writings/Prison" element={<PrisonShell />} />
+
           <Route path="/About" element={<AboutShell />} />
         </Routes>
       </div>

@@ -12,6 +12,9 @@ import lifetimeImg from "../../../assets/screenplay-imgs/lifetime-thumb-img.jpg"
 import mothImg from "../../../assets/screenplay-imgs/moth-dust-thumb-img.jpg";
 import waitingForYouImg from "../../../assets/screenplay-imgs/waiting-for-you-img.jpg";
 
+export const screenplayIntro =
+  "Hugh Stoddart’s screenwriting career spans acclaimed feature films and television dramas. Explore his body of work, including powerful stories brought to life on screen, from character-driven narratives to adaptations of literary classics.";
+
 interface Release {
   broadcast?: {
     wasLiveBroadcasted: boolean;

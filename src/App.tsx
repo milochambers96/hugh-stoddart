@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Layout/Navbar";
+import ScrollToTop from "./components/Utility/ScrollToTop";
 import Home from "./components/HomePage/Home";
 import WritingsShell from "./components/WritingsPage/WritingsShell";
 import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShell";
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop />
       <div className="bg-hs-background h-screen">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -39,18 +39,18 @@ const PrisonShell = () => {
         <div className="hidden md:block text-justify text-lg leading-relaxed">
           <div className="grid grid-cols-5 gap-x-16 mx-auto">
             <div className="col-span-2 space-y-8">
-              <div className="aspect-w-2 aspect-h-2">
+              <div className="aspect-w-2 aspect-h-2 shadow-lg">
                 <img
                   src={prisonInfo.images[0]}
                   alt="A cover for an issue of the magazine, 'Not Shut Up'"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="aspect-w-2 aspect-h-3">
+              <div className="aspect-w-2 aspect-h-3 shadow-lg">
                 <img
                   src={prisonInfo.images[1]}
                   alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                  className="w-full h-full object-cover shadow"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

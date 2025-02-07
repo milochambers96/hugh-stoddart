@@ -33,6 +33,7 @@ const ScreenplayShell = () => {
                   <ScreenplayFrame
                     imagePath={screen.media.image}
                     title={screen.title}
+                    id={screen.id}
                   />
                 </article>
               ))}
@@ -47,6 +48,7 @@ const ScreenplayShell = () => {
                 <ScreenplayFrame
                   imagePath={screen.media.image}
                   title={screen.title}
+                  id={screen.id}
                 />
               </article>
             ))}

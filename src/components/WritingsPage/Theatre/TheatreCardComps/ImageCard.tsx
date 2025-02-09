@@ -17,7 +17,18 @@ const ImageCard = ({ script, isMobile }: ImgCardProps) => {
               alt={`A photograph of a performance of ${script.title}`}
             />
           </div>
-          <div className="col-span-2 space-y-3 text-sm my-auto">
+          <div className="col-span-2 space-y-2 text-sm my-auto">
+            {!script.isCoWritten ? (
+              <p className="text-sm">
+                Written by{" "}
+                <span className="font-semibold">{script.writters[0]}</span>.
+              </p>
+            ) : (
+              <p className="ml-2 italic text-sm">
+                Co-written by{" "}
+                <span className="italic">{listPeople(script.writters)}</span>.
+              </p>
+            )}
             {script.wasPerformed && (
               <div>
                 <p>
@@ -83,6 +94,17 @@ const ImageCard = ({ script, isMobile }: ImgCardProps) => {
           src={script.image}
           alt={`A photograph of a performance of ${script.title}`}
         />
+        {!script.isCoWritten ? (
+          <p>
+            Written by{" "}
+            <span className="font-semibold">{script.writters[0]}</span>.
+          </p>
+        ) : (
+          <p>
+            Co-written by{" "}
+            <span className="">{listPeople(script.writters)}</span>.
+          </p>
+        )}
         {script.wasPerformed && (
           <div className="mt-4 space-y-1">
             <p>

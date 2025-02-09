@@ -1,4 +1,5 @@
 import { TheatreScript } from "../../../../data/writings/theatre/theatre";
+import { listPeople } from "../../../Utility/Utils";
 
 interface ImglessCardProp {
   script: TheatreScript;
@@ -6,7 +7,17 @@ interface ImglessCardProp {
 
 const ImagelessCard = ({ script }: ImglessCardProp) => {
   return (
-    <div>
+    <div className="space-y-2">
+      {!script.isCoWritten ? (
+        <p>
+          Written by <span className="font-semibold">{script.writters[0]}</span>
+          .
+        </p>
+      ) : (
+        <p className="">
+          Co-written by <span className="">{listPeople(script.writters)}</span>.
+        </p>
+      )}
       {script.wasPerformed && (
         <div className="space-y-2">
           <p>

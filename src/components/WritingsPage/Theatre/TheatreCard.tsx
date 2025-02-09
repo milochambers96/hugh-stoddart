@@ -10,10 +10,7 @@ interface TheatreCardProp {
 const TheatreCard = ({ script }: TheatreCardProp) => {
   return (
     <div className="border rounded-lg p-6 shadow-lg bg-hs-secondary">
-      <div
-        id={`theatre-card-${script.id}-header-container`}
-        className="space-y-2 mb-4"
-      >
+      <div id={`theatre-card-${script.id}-header-container`} className="mb-4">
         <h2 className="text-3xl">{script.title}</h2>
       </div>
 

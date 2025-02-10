@@ -14,7 +14,7 @@ const Navbar = () => {
     { text: "Home", path: "/" },
     { text: "Writing", path: "/Writings" },
     { text: "About", path: "/About" },
-    // { text: "Contact", path: "" },
+    { text: "Contact", path: "/Contact" },
   ];
 
   return (
@@ -24,10 +24,24 @@ const Navbar = () => {
           <div className="font-semibold md:text-lg sm:text-base">
             {/* desktop navbar */}
             <div className="hidden md:flex justify-between">
-              <p className="border italic">Hugh Stoddard</p>
-              <ul className="md:flex text-hs-link gap-60">
-                {/* <li className="font-semibold md:text-xl">Hugh Stoddard</li> */}
-                {navbarItems.map((item) => (
+              <ul className="md:flex text-hs-link gap-60 my-auto">
+                {navbarItems.slice(0, 2).map((item) => (
+                  <li key={item.text}>
+                    <Link
+                      to={item.path}
+                      className="hover:text-hs-link-hover transition-colors duration-500"
+                    >
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="text-center">
+                <p className="text-2xl">Hugh Stoddard</p>
+                <p className="text-sm">Screenwriter</p>
+              </div>
+              <ul className="md:flex text-hs-link gap-60 my-auto">
+                {navbarItems.slice(2, navbarItems.length).map((item) => (
                   <li key={item.text}>
                     <Link
                       to={item.path}

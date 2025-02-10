@@ -7,15 +7,15 @@ import FellowshipsAndIMDB from "./AboutComps/FellowshipsAndIMDB";
 const AboutShell = () => {
   return (
     <section id="about-shell" className="pt-[60px]">
-      <div className="md:mx-[16%] mx-auto w-5/6 md:w-1/4 mt-6 md:pb-2">
-        <h1 className="text-3xl text-white text-center font-bold italic">
+      <div className="md:mx-[14.25%] mx-auto w-5/6 md:w-1/3 mt-6 md:pb-2">
+        <h1 className="text-3xl md:text-4xl text-white text-center font-bold italic">
           A little bit about Hugh
         </h1>
       </div>
       <div className="hidden md:block">
         <article
           id="about-desktop-content"
-          className="space-y-4 md:w-2/3 mx-auto px-4 py-2 text-white"
+          className="space-y-4 md:w-2/3 mx-auto px-4 pt-2 pb-10 text-white"
         >
           <div className="grid grid-cols-2 gap-x-1 mx-auto">
             <div
@@ -41,6 +41,15 @@ const AboutShell = () => {
             className="mr-20 space-y-4 leading-relaxed"
           >
             <FellowshipsAndIMDB />
+            <p>
+              Hugh is represented by{" "}
+              <span className="font-semibold">
+                <a href="https://swagency105621301.wordpress.com/">
+                  Simon Williamson
+                </a>
+              </span>
+              .
+            </p>
           </div>
         </article>
       </div>
@@ -60,6 +69,15 @@ const AboutShell = () => {
             />
           </div>
           <FellowshipsAndIMDB />
+          <p>
+            Hugh is represented by{" "}
+            <span className="font-semibold">
+              <a href="https://swagency105621301.wordpress.com/">
+                Simon Williamson
+              </a>
+            </span>
+            .
+          </p>
         </article>
       </div>
     </section>

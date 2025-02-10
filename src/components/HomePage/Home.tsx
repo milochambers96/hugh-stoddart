@@ -1,19 +1,14 @@
 const Home = () => {
   return (
-    <section className="pt-[80px] bg-hs-background">
-      <article className="bg-red-900 w-11/12 mx-auto space-y-20">
-        <div
-          id="home-title-container"
-          className="flex-col justify-items-center space-y-2 px-4"
-        >
-          <h1 className="md:text-5xl font-black">Hugh Stoddard</h1>
-          <h2 className="md:text-3xl font-bold">British Screenwriter</h2>
-        </div>
-
-        <div id="image-container">
-          <p>placeholder for animated images</p>
-        </div>
-      </article>
+    <section className="h-screen pt-[60px] bg-gradient-to-b from-gray-900 to-gray-700">
+      <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center">
+        <h1 className="text-4xl md:text-6xl text-white font-bold mb-6">
+          Hugh Stoddart
+        </h1>
+        <h2 className="text-xl md:text-2xl text-gray-300 mb-12 text-center">
+          British screenwriter
+        </h2>
+      </div>
     </section>
   );
 };

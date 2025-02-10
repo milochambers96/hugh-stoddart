@@ -29,7 +29,7 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
             <img
               src={writing.image}
               alt={writing.imgAlt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fit"
             />
             <figcaption
               className={`absolute bottom-0 left-0 right-0 bg-black/70 text-white md:text-justify p-2 transition-opacity duration-300 ${

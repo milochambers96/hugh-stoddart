@@ -26,7 +26,7 @@ const TheatreShell = () => {
       </div>
 
       {/* Desktop Swiper SLides Display */}
-      <div className="hidden md:block w-9/12 mx-auto mt-12 p-4">
+      <div className="hidden md:block w-9/12 mx-auto p-4">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation

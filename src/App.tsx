@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
-      <div className="bg-hs-background h-screen">
+      <div className="bg-hs-background min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Writings" element={<WritingsShell />} />

@@ -1,5 +1,5 @@
 import { TheatreScript } from "../../../../data/writings/theatre/theatre";
-import { listPeople } from "../../../Utility/Utils";
+import { listPeople } from "../../../Utility/utils";
 
 interface ImglessCardProp {
   script: TheatreScript;

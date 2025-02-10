@@ -7,19 +7,17 @@ const WritingsShell = () => {
     <section id="writings-shell" className="pt-[60px] bg-hs-background pb-20">
       <div
         id="writings-header"
-        className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 p-4 text-white"
+        className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 py-4 text-white"
       >
-        <h1 className="text-xl md:text-5xl text-center font-bold">
+        <h1 className="text-3xl md:text-5xl text-center font-bold">
           Hugh's Writings
         </h1>
-        <p className="md:text-justify text-sm md:text-xl font-semibold">
-          {writingsIntro}
-        </p>
+        <p className="text-justify md:text-xl font-semibold">{writingsIntro}</p>
       </div>
 
       <div className="hidden md:block">
         <div className="mt-12 w-4/6 mx-auto">
-          <div className="grid grid-cols-4 gap-20">
+          <div className="grid grid-cols-4 gap-x-20 gap-y-12">
             {writingsOverview.map((writing, id) => (
               <article key={id} className="col-span-2 py-4">
                 <WritingShellCard writing={writing} />
@@ -30,9 +28,9 @@ const WritingsShell = () => {
       </div>
 
       <div className="md:hidden">
-        <div className="mt-8 w-5/6 mx-auto">
+        <div className="mt-4 w-5/6 mx-auto space-y-6">
           {writingsOverview.map((writing, id) => (
-            <article key={id} className="col-span-2 py-4">
+            <article key={id} className="py-4">
               <WritingShellCard writing={writing} />
             </article>
           ))}

@@ -1,7 +1,7 @@
 import notShutUpImg from "../../assets/writing-page-imgs/not-shut-up-issue-7.jpg";
 
 export const writingsIntro =
-  "Hugh Stoddart’s writing spans film, theatre, and journalism. Learn about his screenplays and theatre projects, read selected art reviews, and discover his influential magazine project featuring interviews with creative voices who have experienced prison. Explore below to find out more.";
+  "Hugh Stoddart’s writing spans film, theatre, and journalism. Learn about his screenplays and theatre projects, read selected art reviews, and discover his influential magazine project featuring interviews with creative voices who have experienced prison.";
 
 export const writingsOverview = [
   {
@@ -26,7 +26,7 @@ export const writingsOverview = [
 
   {
     id: 3,
-    title: "The Arts",
+    title: "Visual Arts",
     image: "http://hughstoddart.co.uk/images/screen/big-bittalions.jpg",
     imgAlt: "A photograph of a performance of Hugh's theatre scripts.",
     navPath: "/Writings/TheArts",

@@ -10,6 +10,7 @@ import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShe
 import TheatreShell from "./components/WritingsPage/Theatre/TheatreShell";
 import PrisonShell from "./components/WritingsPage/Prison/PrisonShell";
 import AboutShell from "./components/AboutPage/AboutShell";
+import ContactShell from "./components/ContactPage/ContactShell";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/Writings/Prison" element={<PrisonShell />} />
 
           <Route path="/About" element={<AboutShell />} />
+
+          <Route path="/Contact" element={<ContactShell />} />
         </Routes>
       </div>
     </Router>

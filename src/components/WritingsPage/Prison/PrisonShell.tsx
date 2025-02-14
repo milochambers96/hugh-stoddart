@@ -21,10 +21,10 @@ const PrisonShell = () => {
   };
 
   return (
-    <section id="prison-shell" className="pt-[60px] bg-hs-background pb-20">
+    <section id="prison-shell" className="pt-[60px] pb-20">
       <div
         id="prison-header-container"
-        className="bg-hs-accent space-y-4 w-5/6 md:w-2/3 mx-auto mt-4 p-4"
+        className="space-y-4 w-5/6 md:w-2/3 mx-auto mt-4 p-4 text-white"
       >
         <h1 className="text-3xl md:text-5xl text-center font-bold">
           Prison Residency
@@ -35,29 +35,37 @@ const PrisonShell = () => {
         </h2>
       </div>
 
-      <div className="mt-8 md:mt-12 w-5/6 md:w-4/6 mx-auto text-white font-semibold">
+      <div className="mt-8 md:mt-8 w-5/6 md:w-4/6 mx-auto text-white font-semibold">
         <div className="hidden md:block text-justify text-lg leading-relaxed">
-          <div className="grid grid-cols-5 gap-x-16 mx-auto">
-            <div className="col-span-2 space-y-8">
-              <div className="aspect-w-2 aspect-h-2 shadow-lg">
-                <img
-                  src={prisonInfo.images[0]}
-                  alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                  className="w-full h-full object-cover"
-                />
+          {/* Regular desktop layout */}
+          <div className="hidden md:block text-justify text-lg leading-relaxed space-y-8">
+            <div className="px-16 space-y-8">
+              <p>{txtConts[0]}</p>
+              <p>{txtConts[1]}</p>
+            </div>
+            <div className="flex gap-x-14 justify-center">
+              <div className="w-2/5">
+                <div className="h-[420px]">
+                  <img
+                    src={prisonInfo.images[0]}
+                    alt="A cover for an issue of the magazine, 'Not Shut Up'"
+                    className="w-full h-full object-contain shadow-lg"
+                  />
+                </div>
               </div>
-              <div className="aspect-w-2 aspect-h-3 shadow-lg">
-                <img
-                  src={prisonInfo.images[1]}
-                  alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-2/5">
+                <div className="h-[420px]">
+                  <img
+                    src={prisonInfo.images[1]}
+                    alt="A cover for an issue of the magazine, 'Not Shut Up'"
+                    className="w-full h-full object-contain shadow-lg"
+                  />
+                </div>
               </div>
             </div>
-            <div className="col-span-3 space-y-8 ">
-              {txtConts.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
+            <div className="px-16 space-y-8">
+              <p>{txtConts[2]}</p>
+              <p>{txtConts[3]}</p>
             </div>
           </div>
         </div>

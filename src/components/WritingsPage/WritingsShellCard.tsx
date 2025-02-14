@@ -25,11 +25,11 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
           onMouseEnter={() => setIsShowing(true)}
           onMouseLeave={() => setIsShowing(false)}
         >
-          <figure className="aspect-ratio h-[270px] mx-auto">
+          <figure className="w-full h-[250px]">
             <img
               src={writing.image}
               alt={writing.imgAlt}
-              className="w-full h-full object-fit"
+              className="w-full h-full object-cover"
             />
             <figcaption
               className={`absolute bottom-0 left-0 right-0 bg-black/70 text-white md:text-justify p-2 transition-opacity duration-300 ${

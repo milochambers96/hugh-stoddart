@@ -16,7 +16,7 @@ const ScreenplayFrame = ({ imagePath, title, id }: ScreenFrameProps) => {
       onMouseEnter={() => setIsShowing(true)}
       onMouseLeave={() => setIsShowing(false)}
     >
-      <Link to={`Writings/Screenplays/${id}`}>
+      <Link to={`/Writings/Screenplays/${id}`}>
         <div className="relative w-64 md:w-80 h-48 md:h-60 border-4 border-gray-800/60 bg-gray-900/60">
           {/* Top Sprocket Strip */}
           <div className="absolute -top-3 left-0 w-full h-4 bg-gray-800/60">

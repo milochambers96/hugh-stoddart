@@ -1,4 +1,5 @@
 import { prisonInfo } from "../../../data/writings/prison/prison";
+import BackButton from "../../Utility/BackButton";
 
 const PrisonShell = () => {
   const txtConts = prisonInfo.textContent;
@@ -22,9 +23,12 @@ const PrisonShell = () => {
 
   return (
     <section id="prison-shell" className="pt-[60px] pb-20">
+      <div className=" flex justify-end pr-6 pt-4">
+        <BackButton backUrl={"/Writings/"} />
+      </div>
       <div
         id="prison-header-container"
-        className="space-y-4 w-5/6 md:w-2/3 mx-auto mt-4 p-4 text-white"
+        className="space-y-4 w-5/6 md:w-2/3 mx-auto px-4 text-white"
       >
         <h1 className="text-3xl md:text-5xl text-center font-bold">
           Prison Residency

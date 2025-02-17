@@ -6,14 +6,19 @@ import {
 } from "../../../data/writings/screen/screenplays";
 import ScreenplayFrame from "./ScreenplayReelCard";
 
+import BackButton from "../../Utility/BackButton";
+
 const ScreenplayShell = () => {
   const orderedScreenplay = useMemo(() => [...screenplays].reverse(), []);
 
   return (
     <section className="pt-[60px] bg-hs-background pb-20">
+      <div className=" flex justify-end pr-6 pt-4">
+        <BackButton backUrl={"/Writings/"} />
+      </div>
       <div
         id="screenplays-header"
-        className="space-y-4 w-5/6 md:w-2/3 mx-auto mt-4 p-4 text-white"
+        className="space-y-4 w-5/6 md:w-2/3 mx-auto p-4 text-white"
       >
         <h1 className="text-xl md:text-5xl text-center font-bold">
           Screenplays

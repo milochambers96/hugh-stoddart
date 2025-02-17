@@ -4,6 +4,7 @@ import {
   threatreIntro,
   theatreScripts,
 } from "../../../data/writings/theatre/theatre";
+import BackButton from "../../Utility/BackButton";
 import TheatreCard from "./TheatreCard";
 
 import "swiper/css";
@@ -13,12 +14,15 @@ import "swiper/css/pagination";
 const TheatreShell = () => {
   return (
     <section id="theatre-shell" className="pt-[60px] bg-hs-background pb-20">
+      <div className=" flex justify-end pr-6 pt-4">
+        <BackButton backUrl={"/Writings/"} />
+      </div>
       <div
         id="theatre-header"
-        className="bg-hs-accent space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 p-4"
+        className="bg-hs-accent space-y-6 w-5/6 md:w-2/3 mx-auto p-4"
       >
         <h1 className="text-xl md:text-5xl text-center font-bold">
-          Hugh's Scripts
+          Theatre Scripts
         </h1>
         <p className="md:text-justify text-sm md:text-xl font-semibold">
           {threatreIntro}

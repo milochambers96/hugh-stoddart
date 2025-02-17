@@ -1,6 +1,15 @@
 import { useState, useCallback, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import DualPillTab from "../../Utility/DualPillTab";
+import BackButton from "../../Utility/BackButton";
+import DetailsSubtitle from "./ScreenplayItemComps/DetailsSubtitle";
+import Overview from "./ScreenplayItemComps/Overview";
+import Credits from "./ScreenplayItemComps/Credits";
+import MediaDisplay from "./ScreenplayItemComps/MediaDisplay";
+import PreviousButton from "./ScreenplayItemComps/PreviousButton";
+import NextButton from "./ScreenplayItemComps/NextButton";
+
 import {
   Screenplay,
   screenplays,
@@ -11,9 +20,7 @@ const ScreenplayItemShell = () => {
   const screenIdNum = Number(id);
 
   const [screenItem, setScreenItem] = useState<null | Screenplay>(null);
-  //   const [infoToRender, setInfoToRender] = useState<"overview" | "credits">(
-  //     "overview"
-  //   );
+  const [display, setDisplay] = useState("overview");
 
   const getScreenplay = useCallback(() => {
     const foundScreenplay = screenplays.filter(
@@ -32,20 +39,60 @@ const ScreenplayItemShell = () => {
 
   return (
     <section className="pt-[60px] pb-20">
-      <div className="space-y-6 w-5/6 md:w-2/3 2xl:w-1/2 mx-auto mt-8 py-4 text-white">
+      <div className="flex justify-end pr-6 pt-4">
+        <BackButton backUrl={"/Writings/Screenplays"} />
+      </div>
+      <div className="space-y-2 w-5/6 md:w-3/4 2xl:w-1/2 mx-auto mt-4 text-white">
         <h1 className="text-3xl md:text-5xl text-center font-bold">
           {screenItem?.title}
         </h1>
+        {screenItem && (
+          <div className="flex justify-center">
+            {" "}
+            <DetailsSubtitle screen={screenItem} />{" "}
+          </div>
+        )}
+      </div>
+      <div className=" mt-2 py-2 flex justify-center">
+        <DualPillTab
+          display={display}
+          setDisplay={setDisplay}
+          option1={"overview"}
+          option2={"credits"}
+        />{" "}
       </div>
 
       <div className="hidden md:block">
-        <div className="mt-12 md:w-2/3 2xl:w-1/2 mx-auto">
-          <div className="flex flex-wrap justify-between gap-y-20">
-            <div className="flex-1">
-              <img
-                src={screenItem?.media.image}
-                alt={`A still shot from ${screenItem?.title}`}
-              />
+        <div className="mt-6 md:w-3/4 2xl:w-1/2 mx-auto">
+          <div className="flex flex-wrap justify-between gap-x-10">
+            <div className="flex-1 leading-relaxed px-2 text-white text- font-">
+              {screenItem && display === "overview" && (
+                <Overview screen={screenItem} />
+              )}
+              {screenItem && display === "credits" && (
+                <Credits screen={screenItem} />
+              )}
+            </div>
+            <div className="flex-2">
+              {screenItem && screenItem.media && (
+                <MediaDisplay
+                  media={{
+                    hasVideo: screenItem.media.hasVideo ?? false, // Defaults to false if undefined
+                    image: screenItem.media.image,
+                  }}
+                  title={screenItem.title}
+                />
+              )}{" "}
+            </div>
+          </div>
+
+          <div className="mt-6 flex justify-between px-12">
+            <div>
+              <PreviousButton screenIdNum={screenIdNum} />
+            </div>
+
+            <div>
+              <NextButton screenIdNum={screenIdNum} />
             </div>
           </div>
         </div>

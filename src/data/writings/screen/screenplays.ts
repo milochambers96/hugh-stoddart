@@ -56,7 +56,7 @@ interface Media {
   videoPath?: string;
 }
 
-interface Streaming {
+export interface Streaming {
   isStreaming: boolean;
   available: {
     service: string;
@@ -306,7 +306,7 @@ export const screenplays: Screenplay[] = [
       reviews: [
         {
           comment: "This is a rewarding, richly textured dramatization.",
-          author: "Gail Williams (Hoyywood Reporter)",
+          author: "Gail Williams (Holywood Reporter)",
         },
       ],
     },
@@ -350,7 +350,7 @@ export const screenplays: Screenplay[] = [
       reviews: [
         {
           comment:
-            "The sense of loss was everywhere. Difficult to enjoy … impossible to forget.",
+            "The sense of loss was everywhere. Difficult to enjoy… impossible to forget.",
           author: "Gerard Dempsey (Daily Express)",
         },
       ],
@@ -429,12 +429,7 @@ export const screenplays: Screenplay[] = [
     release: {
       broadcast: {
         wasLiveBroadcasted: true,
-        broadcastHistory: [
-          {
-            channel: "Channel 4",
-            date: 1997,
-          },
-        ],
+        broadcastHistory: [{ type: "TV", channel: "Channel 4", date: 1997 }],
       },
     },
     cast: [
@@ -482,14 +477,17 @@ export const screenplays: Screenplay[] = [
         wasLiveBroadcasted: true,
         broadcastHistory: [
           {
+            type: "TV",
             channel: "BBC 1",
             date: 1997,
           },
           {
+            type: "TV",
             channel: "PBS",
             date: 1997,
           },
           {
+            type: "TV",
             channel: "BBC 4",
             date: 2004,
           },
@@ -538,6 +536,7 @@ export const screenplays: Screenplay[] = [
         wasLiveBroadcasted: true,
         broadcastHistory: [
           {
+            type: "TV",
             channel: "BBC 1",
             date: 2002,
             wasRepeated: true,
@@ -575,7 +574,7 @@ export const screenplays: Screenplay[] = [
     },
     awards: {
       hasAward: true,
-      award: ["Winner of the Midlands RTS Best Drama Award."],
+      award: ["Winner of the Midlands RTS Best Drama Award"],
     },
   },
 

@@ -25,6 +25,7 @@ interface Release {
       wasRepeated?: boolean;
       repeatDate?: number;
       repeatFreq?: string;
+      repeatMessage?: string;
       regions?: string[];
       event?: string;
       location?: string;
@@ -201,12 +202,18 @@ export const screenplays: Screenplay[] = [
             type: "Cinema",
             regions: ["UK"],
             date: 1982,
+            wasRepeated: true,
+            message:
+              "Sold-out screenings at the Peninsula Arts Cinema, Plymouth, in 2017 and 2024",
           },
 
           {
             type: "TV",
             channel: "Channel 4",
             date: 1982,
+            wasRepeated: true,
+            repeatMessage:
+              "Repeated on Channel 4 in 2018 to celebrate Gary Oldman",
           },
 
           {
@@ -217,12 +224,12 @@ export const screenplays: Screenplay[] = [
             link: "https://plymouthartscinema.org/remembrance-a-film-that-will-mean-a-lot-to-anybody-from-plymouth/",
           },
 
-          {
-            type: "Special Re-run",
-            message: "Shown on Channel Four to celebrate Gary Oldman.",
-            location: "TV Screening",
-            date: [2018],
-          },
+          // {
+          //   type: "Special Re-run",
+          //   message: "Repeated on Channel 4 in 2018 to celebrate Gary Oldman.",
+          //   location: "TV Screening",
+          //   date: [2018],
+          // },
 
           {
             type: "Restoration",
@@ -526,7 +533,7 @@ export const screenplays: Screenplay[] = [
 
   {
     id: 9,
-    title: "Dalziel & Pascoe - Dialogues of the Dead",
+    title: "Dialogues of the Dead",
     type: "TV Series",
     episodes: 2,
     duration: 60,
@@ -625,7 +632,7 @@ export const screenplays: Screenplay[] = [
       "Old Dan's dream is both about his past and his imminent end, yet reaches out to the new lives that are always beginning; Bach's music for piano and cello counterpoints the poem shared between Dan and Beatrice. The film was shot in Hastings, England.",
     media: {
       hasVideo: true,
-      videoPath: "https://vimeo.com/26933960",
+      videoPath: "https://player.vimeo.com/video/26933960",
       image: lifetimeImg,
     },
   },
@@ -652,7 +659,7 @@ export const screenplays: Screenplay[] = [
       "A crisis between lovers Mark and Sarah is revealed by dreams and a poem, echoed by Debussy's beautiful but sombre music. The film was shot in Sligo, Ireland.",
     media: {
       hasVideo: true,
-      videoPath: "https://vimeo.com/128259086",
+      videoPath: "https://player.vimeo.com/video/128259086",
       image: mothImg,
     },
   },

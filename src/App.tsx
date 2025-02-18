@@ -4,6 +4,7 @@ import "./App.css";
 
 import Navbar from "./components/Layout/Navbar";
 import ScrollToTop from "./components/Utility/ScrollToTop";
+import Background from "./components/Layout/Background";
 import Home from "./components/HomePage/Home";
 import WritingsShell from "./components/WritingsPage/WritingsShell";
 import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShell";
@@ -18,7 +19,8 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
-      <div className="bg-hs-background min-h-screen">
+      {/* <div className="bg-hs-background min-h-screen"> */}
+      <Background>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Writings" element={<WritingsShell />} />
@@ -34,7 +36,8 @@ function App() {
 
           <Route path="/Contact" element={<ContactShell />} />
         </Routes>
-      </div>
+      </Background>
+      {/* </div> */}
     </Router>
   );
 }

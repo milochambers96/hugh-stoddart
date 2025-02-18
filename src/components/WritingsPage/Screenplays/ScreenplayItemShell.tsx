@@ -76,12 +76,13 @@ const ScreenplayItemShell = () => {
                 <Credits screen={screenItem} />
               )}
             </div>
-            <div className="flex-2">
+            <div className="flex-2 my-auto">
               {screenItem && screenItem.media && (
                 <MediaDisplay
                   media={{
                     hasVideo: screenItem.media.hasVideo ?? false,
                     image: screenItem.media.image,
+                    videoPath: screenItem.media.videoPath ?? "",
                   }}
                   title={screenItem.title}
                 />

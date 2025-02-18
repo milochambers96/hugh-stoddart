@@ -27,15 +27,12 @@ const BroadcastHistory = ({ screen }: BroadcastHistoryProp) => {
                 {broadcast.wasRepeated && broadcast.repeatDate && (
                   <span>{` Repeated in ${broadcast.repeatDate}.`}</span>
                 )}
+                {broadcast.wasRepeated && broadcast.repeatMessage && (
+                  <span> {broadcast.repeatMessage}.</span>
+                )}
               </>
             ) : broadcast.type === "Special Re-run" ? (
-              <>
-                {broadcast.message} ({broadcast.location},{" "}
-                {Array.isArray(broadcast.date)
-                  ? broadcast.date.join(", ")
-                  : broadcast.date}
-                ).
-              </>
+              <>{broadcast.message}</>
             ) : null}
           </li>
         ))}

@@ -2,7 +2,7 @@ export interface ArtText {
   id: number;
   fName?: string;
   lName: string;
-  type: "article" | "catalogue essay" | "review" | "essay" | "other";
+  type: "article" | "review" | "essay" | "other";
   purpose: string;
   publishText?: string[];
   pdf: string;
@@ -27,7 +27,7 @@ export const artTexts: ArtTexts = {
       id: 2,
       fName: "George",
       lName: "Blacklock",
-      type: "catalogue essay",
+      type: "essay",
       purpose: "Catalogue essay | Solo show",
       publishText: ["Flowers Central | October 2003"],
       pdf: "placeholder",
@@ -112,7 +112,7 @@ export const artTexts: ArtTexts = {
       id: 12,
       fName: "Noel",
       lName: "Forster",
-      type: "catalogue essay",
+      type: "essay",
       purpose: "Catalogue essay 'Meridiano de Greenwich'",
       publishText: ["Madrid / London May 2002"],
       pdf: "placeholder",

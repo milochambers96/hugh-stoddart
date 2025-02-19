@@ -9,7 +9,33 @@ import { artTexts } from "../../../data/writings/art/arts";
 
 const ArtsShell = () => {
   const artTextData = artTexts.artTexts;
-  const [display, setDisplay] = useState("overview");
+  const [display, setDisplay] = useState("all");
+
+  const getFilteredArtTexts = () => {
+    if (display === "all") {
+      return artTextData;
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const typeMap = {
+      reviews: "review",
+      essays: "essay",
+      article: "article",
+    };
+
+    return artTextData.filter((text) => {
+      if (display === "reviews") {
+        return text.type === "review";
+      } else if (display === "essays") {
+        return text.type === "essay";
+      } else if (display === "articles") {
+        return text.type === "article";
+      }
+      return false;
+    });
+  };
+
+  const filteredArtTexts = getFilteredArtTexts();
 
   return (
     <section id="arts-shell" className="pt-[60px] pb-20">
@@ -31,15 +57,15 @@ const ArtsShell = () => {
           display={display}
           setDisplay={setDisplay}
           option1={"all"}
-          option2="reviews"
+          option2={"reviews"}
           option3={"essays"}
-          option4={"other"}
+          option4={"articles"}
         />
       </div>
 
       <div className="mt-10 2xl:mt-16">
         <div className="flex flex-wrap gap-6 md:gap-12 justify-center">
-          {artTextData.map((text, index) => (
+          {filteredArtTexts.map((text, index) => (
             <article className="md:w-[40%] w-5/6" key={index}>
               <ArtsItemCard art={text} />
             </article>

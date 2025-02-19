@@ -42,7 +42,7 @@ const ScreenplayItemShell = () => {
       <div className="flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/Screenplays"} />
       </div>
-      <div className="space-y-2 w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-8 2xl:mt-20 text-white">
+      <div className="space-y-2 w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-10 2xl:mt-20 text-white">
         <div className="flex justify-between items-center">
           <PreviousButton screenIdNum={screenIdNum} />
           <h1 className="text-3xl md:text-5xl text-center font-bold">

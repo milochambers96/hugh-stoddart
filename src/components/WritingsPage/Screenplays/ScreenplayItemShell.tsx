@@ -42,7 +42,7 @@ const ScreenplayItemShell = () => {
       <div className="flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/Screenplays"} />
       </div>
-      <div className="space-y-2 w-5/6 md:w-3/4 2xl:w-1/2 mx-auto mt-4 text-white">
+      <div className="space-y-2 w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-8 2xl:mt-20 text-white">
         <div className="flex justify-between items-center">
           <PreviousButton screenIdNum={screenIdNum} />
           <h1 className="text-3xl md:text-5xl text-center font-bold">
@@ -51,23 +51,24 @@ const ScreenplayItemShell = () => {
           <NextButton screenIdNum={screenIdNum} />
         </div>
         {screenItem && (
-          <div className="flex justify-center">
+          <div className="mx-auto text-center">
             <DetailsSubtitle screen={screenItem} />
           </div>
         )}
       </div>
 
       <div className="hidden md:block">
-        <div className="mt-6 md:w-3/4 2xl:w-1/2 mx-auto">
-          <div className="flex flex-wrap justify-between gap-x-10">
-            <div className="flex-1 2xl:mt-12 leading-relaxed px-2 text-white">
+        <div className="mt-6 md:w-3/4 2xl:w-3/5 mx-auto">
+          <div className="flex justify-between gap-x-10 relative">
+            {/* Text column */}
+            <div className="flex-1 leading-relaxed px-2 text-white">
               <div className="mt-2 py-2 flex justify-center mb-2">
                 <DualPillTab
                   display={display}
                   setDisplay={setDisplay}
                   option1={"overview"}
                   option2={"credits"}
-                />{" "}
+                />
               </div>
               {screenItem && display === "overview" && (
                 <Overview screen={screenItem} />
@@ -76,7 +77,9 @@ const ScreenplayItemShell = () => {
                 <Credits screen={screenItem} />
               )}
             </div>
-            <div className="flex-2 2xl:mt-12 my-auto">
+
+            {/* Media column  */}
+            <div className="flex-2 self-start sticky top-[40%]">
               {screenItem && screenItem.media && (
                 <MediaDisplay
                   media={{
@@ -86,7 +89,7 @@ const ScreenplayItemShell = () => {
                   }}
                   title={screenItem.title}
                 />
-              )}{" "}
+              )}
             </div>
           </div>
         </div>

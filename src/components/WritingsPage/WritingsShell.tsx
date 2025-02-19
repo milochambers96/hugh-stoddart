@@ -4,7 +4,7 @@ import WritingShellCard from "./WritingsShellCard";
 const WritingsShell = () => {
   return (
     <section id="writings-shell" className="pt-[60px] pb-20">
-      <div className="space-y-6 w-5/6  2xl:w-1/2 mx-auto mt-4 py-4 text-white">
+      <div className="space-y-6 w-5/6 md:w-2/3  2xl:w-1/2 mx-auto mt-4 py-4 text-white">
         <h1 className="text-3xl md:text-5xl text-center font-bold">
           Written Work
         </h1>

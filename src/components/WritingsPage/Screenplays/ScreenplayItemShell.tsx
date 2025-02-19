@@ -60,8 +60,8 @@ const ScreenplayItemShell = () => {
       <div className="hidden md:block">
         <div className="mt-6 md:w-3/4 2xl:w-1/2 mx-auto">
           <div className="flex flex-wrap justify-between gap-x-10">
-            <div className="flex-1 leading-relaxed px-2 text-white text- font-">
-              <div className=" mt-2 py-2 flex justify-center mb-2">
+            <div className="flex-1 2xl:mt-12 leading-relaxed px-2 text-white">
+              <div className="mt-2 py-2 flex justify-center mb-2">
                 <DualPillTab
                   display={display}
                   setDisplay={setDisplay}
@@ -76,7 +76,7 @@ const ScreenplayItemShell = () => {
                 <Credits screen={screenItem} />
               )}
             </div>
-            <div className="flex-2 my-auto">
+            <div className="flex-2 2xl:mt-12 my-auto">
               {screenItem && screenItem.media && (
                 <MediaDisplay
                   media={{

@@ -39,9 +39,9 @@ const PrisonShell = () => {
         </h2>
       </div>
 
-      <div className="mt-8 md:mt-8 w-5/6 md:w-4/6 mx-auto text-white font-semibold">
+      <div className="mt-8 md:mt-8 w-5/6  mx-auto text-white font-semibold">
+        {/*  Desktop layout */}
         <div className="hidden md:block text-justify text-lg leading-relaxed">
-          {/* Regular desktop layout */}
           <div className="hidden md:block text-justify text-lg leading-relaxed space-y-8">
             <div className="px-16 space-y-8">
               <p>{txtConts[0]}</p>
@@ -53,7 +53,7 @@ const PrisonShell = () => {
                   <img
                     src={prisonInfo.images[0]}
                     alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                    className="w-full h-full object-contain shadow-lg"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
@@ -62,7 +62,7 @@ const PrisonShell = () => {
                   <img
                     src={prisonInfo.images[1]}
                     alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                    className="w-full h-full object-contain shadow-lg"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>

@@ -9,7 +9,7 @@ const AboutShell = () => {
     <section id="about-shell" className="pt-[60px]">
       {/* Desktop/Laptop View */}
       <div className="hidden md:block">
-        <article className="w-2/3 mx-auto px-4 pt-2 pb-10 text-white">
+        <article className="w-2/3 mx-auto px-4 pt-2 md:pb-10 2xl:pb-0 text-white">
           <div className="mt-10 md:mt-12 2xl:mt-20 mb-4">
             <h1 className="ml-1 text-4xl text-white font-bold italic">
               A little bit about Hugh

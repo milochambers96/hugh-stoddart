@@ -10,6 +10,7 @@ import WritingsShell from "./components/WritingsPage/WritingsShell";
 import ScreenplayShell from "./components/WritingsPage/Screenplays/ScreenplayShell";
 import ScreenplayItemShell from "./components/WritingsPage/Screenplays/ScreenplayItemShell";
 import TheatreShell from "./components/WritingsPage/Theatre/TheatreShell";
+import ArtsShell from "./components/WritingsPage/Arts/ArtsShell";
 import PrisonShell from "./components/WritingsPage/Prison/PrisonShell";
 import AboutShell from "./components/AboutPage/AboutShell";
 import ContactShell from "./components/ContactPage/ContactShell";
@@ -30,6 +31,8 @@ function App() {
             element={<ScreenplayItemShell />}
           />
           <Route path="/Writings/Theatre" element={<TheatreShell />} />
+          <Route path="/Writings/TheArts" element={<ArtsShell />} />
+
           <Route path="/Writings/Prison" element={<PrisonShell />} />
 
           <Route path="/About" element={<AboutShell />} />

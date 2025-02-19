@@ -1,4 +1,4 @@
-interface ArtText {
+export interface ArtText {
   id: number;
   fName?: string;
   lName: string;
@@ -245,7 +245,7 @@ export const artTexts: ArtTexts = {
   ],
 };
 
-export type { ArtText };
+// export type { ArtText };
 
 export const artIntroOne =
   "Hugh wrote many catalogue essays when Director of the Ikon Gallery and continued to write about art when he could. By the early 1990's he had moved to London and was able to get to more exhibitions, and re-established contactwithartists he'd known from before. Between about 1997 and 2002 he wrote reviews for various magazines, his main outlet being Contemporaryvisual arts, then a bi-monthly under the editorship of Keith Patrick.";

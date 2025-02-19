@@ -36,7 +36,7 @@ const BroadcastHistory = ({ screen }: BroadcastHistoryProp) => {
     }
 
     // Multiple broadcasts
-    const broadcastTexts = tvBroadcasts.map((broadcast, i) => {
+    const broadcastTexts = tvBroadcasts.map((broadcast) => {
       return `${broadcast.channel} in ${broadcast.date}${
         broadcast.wasRepeated
           ? broadcast.repeatFreq

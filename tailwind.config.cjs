@@ -7,8 +7,15 @@ module.exports = {
     extend: {
       colors: {
         hs: {
-          background: "#333333",
-          text: "#E5E5E5",
+          background: "#232323",
+          // hex-codes for core text
+          title: "#EEEEEE",
+          subtitle: "#BBBBBB",
+          body: "#D9D9D9",
+
+          card1: "BBC4AE",
+          card2: "5C6A63",
+
           accent: "#C79A6A",
           secondary: "#4A6E73",
           link: "#00A8A8",

@@ -16,12 +16,11 @@ const ArtsShell = () => {
       return artTextData;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const typeMap = {
-      reviews: "review",
-      essays: "essay",
-      article: "article",
-    };
+    // const typeMap = {
+    //   reviews: "review",
+    //   essays: "essay",
+    //   article: "article",
+    // };
 
     return artTextData.filter((text) => {
       if (display === "reviews") {
@@ -43,11 +42,11 @@ const ArtsShell = () => {
         <BackButton backUrl={"/Writings/"} />
       </div>
 
-      <div className="w-5/6 mx-auto px- text-white space-y-4">
-        <h1 className="text-3xl md:text-5xl text-center font-bold">
+      <div id="arts-header" className="w-5/6 mx-auto space-y-6">
+        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold">
           Visual Arts
         </h1>
-        <div className="space-y-4 pt-2 md:pt-4 md:px-6 text-justify  text-lg md:text-xl font-semibold leading-relaxed">
+        <div className="space-y-6  md:px-6 text-justify  md:text-xl text-hs-body font-medium leading-relaxed">
           <ArtsIntro />
         </div>
       </div>

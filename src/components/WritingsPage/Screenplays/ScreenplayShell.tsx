@@ -12,23 +12,23 @@ const ScreenplayShell = () => {
   const orderedScreenplay = useMemo(() => [...screenplays].reverse(), []);
 
   return (
-    <section className="pt-[60px] bg-hs-background pb-20">
+    <section id="screenplays-shell" className="pt-[60px] pb-20">
       <div className=" flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/"} />
       </div>
       <div
         id="screenplays-header"
-        className="space-y-4 w-5/6 md:w-2/3 mx-auto p-4 text-white"
+        className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 p-4"
       >
-        <h1 className="text-xl md:text-5xl text-center font-bold">
+        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold">
           Screenplays
         </h1>
-        <p className="text-justify text-sm md:text-xl font-semibold">
+        <p className="text-justify md:text-xl text-hs-body font-medium leading-relaxed">
           {screenplayIntro}
         </p>
       </div>
 
-      <div className="w-5/6 mx-auto mt-16">
+      <div className="w-5/6 mx-auto mt-12 md:mt-16">
         <div className="hidden md:block">
           <div className="grid grid-cols-3 gap-x-4 gap-y-20">
             {orderedScreenplay

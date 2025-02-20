@@ -38,12 +38,12 @@ const ScreenplayFrame = ({ imagePath, title, id }: ScreenFrameProps) => {
             <img
               src={imagePath}
               alt={`A still shot from ${title}.`}
-              className={`max-w-full max-h-[95%] object-contain transition-all duration-300 ${
+              className={`max-w-full max-h-[95%] object-contain transition-all duration-500 ${
                 isShowing ? "blur-sm scale-105" : ""
               }`}
             />
             <figcaption
-              className={`absolute inset-0 flex items-center justify-center  bg-gray-800/70  text-hs-subtitle text-center text-xl md:text-3xl font-bold p-2 transition-opacity duration-300 ${
+              className={`absolute inset-0 flex items-center justify-center  bg-gray-800/70  text-hs-subtitle text-center text-xl md:text-3xl font-bold p-2 transition-opacity duration-500 ${
                 isShowing ? "opacity-100" : "opacity-0"
               }`}
               style={{ zIndex: 10 }}

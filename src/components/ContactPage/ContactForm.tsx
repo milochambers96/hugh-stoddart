@@ -35,9 +35,16 @@ const ContactForm = () => {
   return (
     <>
       {!isSuccess && (
-        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="space-y-6 p-6 bg-hs-card rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
+        >
           <div>
-            <label htmlFor="name" className="block text-white mb-2">
+            <label
+              htmlFor="name"
+              className="block text-hs-subtitle text-lg mb-2"
+            >
               Name
             </label>
             <input
@@ -45,12 +52,15 @@ const ContactForm = () => {
               id="name"
               name="name"
               required
-              className="w-full p-2 rounded bg-white/10 text-white border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-white mb-2">
+            <label
+              htmlFor="email"
+              className="block text-hs-subtitle text-lg mb-2"
+            >
               Email
             </label>
             <input
@@ -58,12 +68,15 @@ const ContactForm = () => {
               id="email"
               name="email"
               required
-              className="w-full p-2 rounded bg-white/10 text-white border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-white mb-2">
+            <label
+              htmlFor="subject"
+              className="block text-hs-subtitle text-lg mb-2"
+            >
               Subject
             </label>
             <input
@@ -71,12 +84,15 @@ const ContactForm = () => {
               id="subject"
               name="subject"
               required
-              className="w-full p-2 rounded bg-white/10 text-white border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-white mb-2">
+            <label
+              htmlFor="message"
+              className="block text-hs-subtitle text-lg mb-2"
+            >
               Message
             </label>
             <textarea
@@ -84,16 +100,18 @@ const ContactForm = () => {
               name="message"
               required
               rows={6}
-              className="w-full p-2 rounded bg-white/10 text-white border border-white/20 focus:border-white/50 outline-none resize-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-white rounded transition-colors disabled:opacity-50"
+            className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body rounded transition-colors disabled:opacity-50"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting
+              ? "Sending...".toLocaleUpperCase()
+              : "Send Message".toLocaleUpperCase()}
           </button>
 
           {error && (
@@ -105,8 +123,8 @@ const ContactForm = () => {
       )}
 
       {isSuccess && (
-        <div className="md:mt-40 space-y-4 md:space-y-10 flex flex-col items-center">
-          <div className="w-2/3 p-4 bg-green-500/20 text-green-200 rounded">
+        <div className="md:mt-40 space-y-4 md:space-y-10 flex flex-col items-center bg-hs-card py-6 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+          <div className="w-2/3 p-4 bg-green-900/70 text-green-200 rounded">
             <p>
               Thank you for your message. Hugh will get back to you as soon as
               possible.
@@ -114,9 +132,9 @@ const ContactForm = () => {
           </div>
           <button
             onClick={() => setIsSuccess(false)}
-            className=" w-2/3 py-2 px-4 bg-white/10 hover:bg-white/20 text-white rounded transition-colors"
+            className="w-2/3 py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body rounded transition-colors"
           >
-            Send Another Message
+            SEND ANOTHER MESSAGE
           </button>
         </div>
       )}

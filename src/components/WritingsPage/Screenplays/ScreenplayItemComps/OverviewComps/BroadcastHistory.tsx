@@ -58,14 +58,12 @@ const BroadcastHistory = ({ screen }: BroadcastHistoryProp) => {
 
   return (
     <div>
-      {tvBroadcasts.length > 0 && (
-        <p className="text-white">{formatBroadcasts()}</p>
-      )}
+      {tvBroadcasts.length > 0 && <p>{formatBroadcasts()}</p>}
 
       {otherBroadcasts.length > 0 && (
         <ul className="space-y-2 mt-2">
           {otherBroadcasts.map((broadcast, index) => (
-            <li key={index} className="text-white">
+            <li key={index}>
               {broadcast.type === "Special Re-run" ? broadcast.message : null}
             </li>
           ))}

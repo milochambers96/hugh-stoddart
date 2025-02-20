@@ -14,7 +14,7 @@ interface OverviewProp {
 
 const Overview = ({ screen }: OverviewProp) => {
   return (
-    <article className="space-y-6">
+    <article className="space-y-4">
       <Synopsis screen={screen} />
       <Awards screen={screen} />
       <Reviews screen={screen} />

@@ -18,9 +18,9 @@ const TheatricalRelease = ({ screen }: TheatricalReleaseProp) => {
 
   return (
     <div>
-      <ul className="space-y-6">
+      <ul className="space-y-4">
         {theatricalScreenings.map((broadcast, index) => (
-          <li key={index} className="text-white">
+          <li key={index}>
             {broadcast.type === "Cinema"
               ? `Released in cinemas (${broadcast.regions?.join(", ")}) in ${
                   Array.isArray(broadcast.date)

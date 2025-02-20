@@ -12,7 +12,7 @@ const ScreenplayFrame = ({ imagePath, title, id }: ScreenFrameProps) => {
 
   return (
     <div
-      className="flex-none mr-4 shadow-lg cursor-pointer"
+      className="flex-none mr-4 shadow-[0_4px_12px_rgba(0,0,0,0.9)] cursor-pointer"
       onMouseEnter={() => setIsShowing(true)}
       onMouseLeave={() => setIsShowing(false)}
     >

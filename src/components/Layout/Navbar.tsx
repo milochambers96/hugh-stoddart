@@ -20,11 +20,11 @@ const Navbar = () => {
   return (
     <header>
       <nav className="fixed w-full bg-hs-accent backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-          <div className="font-semibold md:text-lg sm:text-base">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="font-semibold md:text-lg 2xl:text-xl sm:text-base">
             {/* desktop navbar */}
-            <div className="hidden md:flex justify-between">
-              <ul className="md:flex text-hs-link gap-60 my-auto">
+            <div className="hidden md:flex justify-around">
+              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto">
                 {navbarItems.slice(0, 2).map((item) => (
                   <li key={item.text}>
                     <Link
@@ -36,11 +36,11 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="text-center">
-                <p className="text-2xl">Hugh Stoddard</p>
-                <p className="text-sm">Screenwriter</p>
+              <div className="text-center 2xl:px-20">
+                <p className="text-4xl">Hugh Stoddard</p>
+                <p className="text-xl">Screenwriter</p>
               </div>
-              <ul className="md:flex text-hs-link gap-60 my-auto">
+              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto">
                 {navbarItems.slice(2, navbarItems.length).map((item) => (
                   <li key={item.text}>
                     <Link

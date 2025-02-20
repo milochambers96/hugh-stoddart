@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 
 const TheatreShell = () => {
   return (
-    <section id="theatre-shell" className="pt-[60px] bg-hs-background pb-20">
+    <section id="theatre-shell" className="pt-[90px] bg-hs-background pb-20">
       <div className="flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/"} />
       </div>

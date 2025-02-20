@@ -3,10 +3,10 @@ import WritingShellCard from "./WritingsShellCard";
 
 const WritingsShell = () => {
   return (
-    <section id="writings-shell" className="pt-[60px] pb-20">
+    <section id="writings-shell" className="pt-[90px] pb-20">
       <div
         id="writings-header"
-        className="space-y-6 w-5/6 md:w-2/3  2xl:w-1/2 mx-auto mt-4 py-4"
+        className="space-y-6 w-5/6 md:w-2/3  2xl:w-1/2 mx-auto mt-4 p-4"
       >
         <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold ">
           Written Work

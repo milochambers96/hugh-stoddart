@@ -9,15 +9,24 @@ interface WritingShellCardProp {
 
 export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
   const [isShowing, setIsShowing] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg">
+    <div
+      className={`overflow-hidden border-t-2 border-hs-card-border [#505050]  rounded-lg transition-all duration-300 ${
+        isHovering
+          ? "shadow-[0_4px_12px_rgba(0,0,0,0.9)] bg-[#3A3A3A]"
+          : "shadow-[0_2px_8px_rgba(0,0,0,0.55)] bg-hs-card"
+      }`}
+    >
       <Link to={writing.navPath}>
         <div
           id={`writing-card-${writing.id}-header-container`}
-          className="p-4 bg-black/70 opacity-70 text-white text-center"
+          className=" p-4 text-center transition-colors duration-300"
         >
-          <h3 className="text-lg md:text-xl font-semibold">{writing.title}</h3>
+          <h3 className="text-lg md:text-xl text-hs-subtitle font-semibold">
+            {writing.title}
+          </h3>
         </div>
         <div
           id={`writing-card-${writing.id}-body-container`}
@@ -25,14 +34,18 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
           onMouseEnter={() => setIsShowing(true)}
           onMouseLeave={() => setIsShowing(false)}
         >
-          <figure className="w-full h-[250px]">
+          <figure
+            className="w-full h-[250px]"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             <img
               src={writing.image}
               alt={writing.imgAlt}
               className="w-full h-full object-cover"
             />
             <figcaption
-              className={`absolute bottom-0 left-0 right-0 bg-black/70 text-white md:text-justify p-2 transition-opacity duration-300 ${
+              className={`absolute bottom-0 left-0 right-0 bg-hs-card p-2 text-justify text-hs-body transition-opacity duration-300 ${
                 isShowing ? "opacity-100" : "opacity-0"
               }`}
             >

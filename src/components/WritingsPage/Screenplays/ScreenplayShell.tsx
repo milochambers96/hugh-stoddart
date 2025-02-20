@@ -12,7 +12,7 @@ const ScreenplayShell = () => {
   const orderedScreenplay = useMemo(() => [...screenplays].reverse(), []);
 
   return (
-    <section id="screenplays-shell" className="pt-[60px] pb-20">
+    <section id="screenplays-shell" className="pt-[90px] pb-20">
       <div className=" flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/"} />
       </div>

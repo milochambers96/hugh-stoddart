@@ -6,7 +6,7 @@ import FellowshipsAndIMDB from "./AboutComps/FellowshipsAndIMDB";
 
 const AboutShell = () => {
   return (
-    <section id="about-shell" className="pt-[60px]">
+    <section id="about-shell" className="pt-[90px]">
       {/* Desktop/Laptop View */}
       <div className="hidden md:block">
         <article className="w-2/3 mx-auto px-4 pt-2 md:pb-10 2xl:pb-0">

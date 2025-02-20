@@ -38,7 +38,7 @@ const ScreenplayItemShell = () => {
   }, [getScreenplay]);
 
   return (
-    <section className="pt-[60px] pb-20">
+    <section className="pt-[90px] pb-20">
       <div className="flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/Screenplays"} />
       </div>

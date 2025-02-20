@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { ArtText } from "../../../data/writings/art/arts";
 
 interface ArtsItemCardProp {
@@ -5,6 +7,8 @@ interface ArtsItemCardProp {
 }
 
 const ArtsItemCard = ({ art }: ArtsItemCardProp) => {
+  const [isHovering, setIsHovering] = useState(false);
+
   let artistsName = "";
 
   if ("fName" in art) {
@@ -22,10 +26,18 @@ const ArtsItemCard = ({ art }: ArtsItemCardProp) => {
     }
   };
   return (
-    <div className="space-y-2 p-4 h-full shadow-lg rounded-lg border border-md bg-hs-accent text-lg font-medium">
-      <h3 className="text-xl font-semibold">{artistsName}</h3>
-      <p>{art.purpose}</p>
-      <p>{formatPublishText(art.publishText)}</p>
+    <div
+      className={`h-full space-y-2 p-4  rounded-lg border-t-2 border-hs-card-border bg-hs-card text-lg font-medium transition-all duration-500 ${
+        isHovering
+          ? "shadow-[0_4px_12px_rgba(0,0,0,0.9)] bg-[#3A3A3A] -translate-y-2"
+          : "shadow-[0_2px_8px_rgba(0,0,0,0.55)] bg-hs-card"
+      }`}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      <h3 className="text-xl text-hs-subtitle font-semibold">{artistsName}</h3>
+      <p className="text-hs-body">{art.purpose}</p>
+      <p className="text-hs-body">{formatPublishText(art.publishText)}</p>
       {/* <p>
         <a href={art.pdf}>Read.</a>
       </p> */}

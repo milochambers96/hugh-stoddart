@@ -13,9 +13,9 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
 
   return (
     <div
-      className={`overflow-hidden border-t-2 border-hs-card-border [#505050]  rounded-lg transition-all duration-300 ${
+      className={`overflow-hidden border-t-2 border-hs-card-border  rounded-lg transition-all duration-500 ${
         isHovering
-          ? "shadow-[0_4px_12px_rgba(0,0,0,0.9)] bg-[#3A3A3A]"
+          ? "shadow-[0_4px_12px_rgba(0,0,0,0.9)] bg-[#3A3A3A] -translate-y-2"
           : "shadow-[0_2px_8px_rgba(0,0,0,0.55)] bg-hs-card"
       }`}
     >
@@ -45,7 +45,7 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
               className="w-full h-full object-cover"
             />
             <figcaption
-              className={`absolute bottom-0 left-0 right-0 bg-hs-card p-2 text-justify text-hs-body transition-opacity duration-300 ${
+              className={`absolute bottom-0 left-0 right-0 bg-hs-card/70 p-2 text-justify text-hs-body transition-opacity duration-500 ${
                 isShowing ? "opacity-100" : "opacity-0"
               }`}
             >

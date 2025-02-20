@@ -19,7 +19,7 @@ module.exports = {
           // "card-bk": "BBC4AE",
           // "card-border": "5C6A63",
 
-          accent: "#C79A6A",
+          accent: "#5C6A63",
           secondary: "#4A6E73",
           link: "#00A8A8",
           "link-hover": "#A0D9D9",

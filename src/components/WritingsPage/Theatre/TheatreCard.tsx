@@ -9,7 +9,7 @@ interface TheatreCardProp {
 
 const TheatreCard = ({ script }: TheatreCardProp) => {
   return (
-    <div className="border-2 rounded-lg p-6 shadow-lg bg-hs-secondary">
+    <div className="p-6 shadow-[0_4px_12px_rgba(0,0,0,0.9)] bg-hs-card rounded-lg border-t-2 border-hs-card-border">
       <div id={`theatre-card-${script.id}-header-container`} className="mb-4">
         <h2 className="text-2xl md:text-3xl text-hs-subtitle">
           {script.title}
@@ -18,16 +18,18 @@ const TheatreCard = ({ script }: TheatreCardProp) => {
 
       {script.image ? (
         <>
-          <div className="hidden md:block">
+          <div className="hidden md:block text-hs-body">
             <ImageCard script={script} isMobile={false} />
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden text-hs-body">
             <ImageCard script={script} isMobile={true} />
           </div>
         </>
       ) : (
-        <ImagelessCard script={script} />
+        <div className="text-hs-body">
+          <ImagelessCard script={script} />
+        </div>
       )}
     </div>
   );

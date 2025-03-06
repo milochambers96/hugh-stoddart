@@ -28,9 +28,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        space: ["Space Grotesk", "sans-serif"],
-        redhat: ["Red Hat Display", "sans-serif"],
-        outfit: ["Outfit", "sans-serif"],
+        title: ["Lora", "serif"],
+        body: ["Spectral", "serif"],
+        interactive: ["IBM Plex Mono", "monospace"],
       },
     },
   },

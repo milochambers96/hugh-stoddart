@@ -30,16 +30,16 @@ const PrisonShell = () => {
         id="prison-header"
         className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 text-center"
       >
-        <h1 className="text-3xl md:text-5xl text-hs-title font-bold">
+        <h1 className="text-3xl md:text-5xl text-hs-title font-bold font-title">
           Prison Residency
         </h1>
 
-        <h2 className="text-xl md:text-3xl text-hs-subtitle font-semibold">
+        <h2 className="text-xl md:text-3xl text-hs-subtitle font-semibold font-body">
           NOT SHUT UP
         </h2>
       </div>
 
-      <div className="mt-8 md:mt-10 w-5/6 mx-auto text-hs-body font-medium">
+      <div className="mt-8 md:mt-10 w-5/6 mx-auto text-hs-body font-medium font-body">
         {/*  Desktop layout */}
         <div className="hidden md:block text-justify text-lg leading-relaxed space-y-6">
           <div className="px-12 space-y-6 pb-3">

@@ -21,10 +21,10 @@ const TheatreShell = () => {
         id="theatre-header"
         className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 md:px-4"
       >
-        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold">
+        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold font-title">
           Theatre Scripts
         </h1>
-        <p className="text-justify md:text-xl text-hs-body font-medium leading-relaxed">
+        <p className="px-3 text-justify md:text-xl text-hs-body font-medium font-body leading-relaxed">
           {threatreIntro}
         </p>
       </div>

@@ -35,9 +35,13 @@ const ArtsItemCard = ({ art }: ArtsItemCardProp) => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <h3 className="text-xl text-hs-subtitle font-semibold">{artistsName}</h3>
-      <p className="text-hs-body">{art.purpose}</p>
-      <p className="text-hs-body">{formatPublishText(art.publishText)}</p>
+      <h3 className="text-xl text-hs-subtitle font-semibold font-interactive">
+        {artistsName}
+      </h3>
+      <p className="text-hs-body font-body">{art.purpose}</p>
+      <p className="text-hs-body font-body">
+        {formatPublishText(art.publishText)}
+      </p>
       {/* <p>
         <a href={art.pdf}>Read.</a>
       </p> */}

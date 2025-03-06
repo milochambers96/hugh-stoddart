@@ -45,7 +45,7 @@ const ScreenplayItemShell = () => {
       <div className="w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-10 2xl:mt-20">
         <div className="relative">
           {/* Title */}
-          <div className="text-center">
+          <div className="text-center font-title">
             <h1 className="text-3xl text-hs-title md:text-5xl font-bold">
               {screenItem?.title}
             </h1>
@@ -58,7 +58,7 @@ const ScreenplayItemShell = () => {
 
           {/* Navigation buttons positioned absolutely */}
           <div
-            className="hidden sm:flex justify-between items-center w-full absolute"
+            className="hidden sm:flex justify-between items-center w-full absolute font-interactive"
             style={{ top: "50%", transform: "translateY(-50%)" }}
           >
             <PreviousButton screenIdNum={screenIdNum} />
@@ -68,7 +68,7 @@ const ScreenplayItemShell = () => {
       </div>
 
       {/* Mobile navigation - visible only on smallest screens */}
-      <div className="flex sm:hidden justify-between w-5/6 mx-auto mt-6">
+      <div className="flex sm:hidden justify-between w-5/6 mx-auto mt-6 font-interactive">
         <PreviousButton screenIdNum={screenIdNum} />
         <NextButton screenIdNum={screenIdNum} />
       </div>
@@ -79,7 +79,7 @@ const ScreenplayItemShell = () => {
           <div className="flex justify-between gap-x-10 relative">
             {/* Text column */}
             <div className="flex-1 leading-relaxed px-2 text-hs-body">
-              <div className="mt-2 py-2 flex justify-center mb-2">
+              <div className="mt-2 py-2 flex justify-center mb-2 font-interative">
                 <DualPillTab
                   display={display}
                   setDisplay={setDisplay}
@@ -87,12 +87,14 @@ const ScreenplayItemShell = () => {
                   option2={"credits"}
                 />
               </div>
-              {screenItem && display === "overview" && (
-                <Overview screen={screenItem} />
-              )}
-              {screenItem && display === "credits" && (
-                <Credits screen={screenItem} />
-              )}
+              <div className="font-interactive text-[0.88rem]">
+                {screenItem && display === "overview" && (
+                  <Overview screen={screenItem} />
+                )}
+                {screenItem && display === "credits" && (
+                  <Credits screen={screenItem} />
+                )}
+              </div>
             </div>
 
             {/* Media column */}

@@ -43,7 +43,7 @@ const ScreenplayFrame = ({ imagePath, title, id }: ScreenFrameProps) => {
               }`}
             />
             <figcaption
-              className={`absolute inset-0 flex items-center justify-center  bg-gray-800/70  text-hs-subtitle text-center text-xl md:text-3xl font-bold p-2 transition-opacity duration-500 ${
+              className={`absolute inset-0 flex items-center justify-center  bg-gray-800/70  text-hs-subtitle text-center text-xl md:text-3xl font-bold font-interactive p-2 transition-opacity duration-500 ${
                 isShowing ? "opacity-100" : "opacity-0"
               }`}
               style={{ zIndex: 10 }}

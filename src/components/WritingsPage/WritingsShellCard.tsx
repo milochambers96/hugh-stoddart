@@ -24,7 +24,7 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
           id={`writing-card-${writing.id}-header-container`}
           className=" p-4 text-center transition-colors duration-300"
         >
-          <h3 className="text-lg md:text-xl text-hs-subtitle font-semibold">
+          <h3 className="text-lg md:text-xl text-hs-subtitle font-semibold font-interactive">
             {writing.title}
           </h3>
         </div>
@@ -45,7 +45,7 @@ export const WritingShellCard = ({ writing }: WritingShellCardProp) => {
               className="w-full h-full object-cover"
             />
             <figcaption
-              className={`absolute bottom-0 left-0 right-0 bg-hs-card/70 p-2 text-justify text-hs-body transition-opacity duration-500 ${
+              className={`absolute bottom-0 left-0 right-0 bg-hs-card/70 p-2 text-justify text-hs-body font-body transition-opacity duration-500 ${
                 isShowing ? "opacity-100" : "opacity-0"
               }`}
             >

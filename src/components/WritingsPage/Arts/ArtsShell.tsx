@@ -43,15 +43,15 @@ const ArtsShell = () => {
       </div>
 
       <div id="arts-header" className="w-5/6 mx-auto space-y-6">
-        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold">
+        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold font-title">
           Visual Arts
         </h1>
-        <div className="space-y-6  md:px-6 text-justify  md:text-xl text-hs-body font-medium leading-relaxed">
+        <div className="space-y-6  md:px-6 text-justify  md:text-xl text-hs-body font-medium font-body leading-relaxed">
           <ArtsIntro />
         </div>
       </div>
 
-      <div className="flex justify-center mt-8 py-4">
+      <div className="flex justify-center mt-8 py-4 font-interactive">
         <QuadPillTab
           display={display}
           setDisplay={setDisplay}

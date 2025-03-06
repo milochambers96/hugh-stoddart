@@ -4,9 +4,14 @@ const ContactShell = () => {
   return (
     <section className="pt-[90px] pb-20">
       <article className="max-w-2xl mx-auto p-6 mt-10">
-        <h1 className="text-2xl md:text-4xl font-bold mb-8 md:mb-14 text-center text-hs-title">
-          Get in touch with Hugh
-        </h1>
+        <div className="space-y-6 mb-6 md:mb-12 text-center">
+          <h1 className="text-3xl md:text-5xl text-hs-title font-bold font-title">
+            Contact
+          </h1>
+          <h2 className="text-xl md:text-2xl text-hs-subtitle font-semibold font-body">
+            Complete the below form to get in touch with Hugh
+          </h2>
+        </div>
         <ContactForm />
       </article>
     </section>

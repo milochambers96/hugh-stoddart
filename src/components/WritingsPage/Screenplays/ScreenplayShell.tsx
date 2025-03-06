@@ -20,10 +20,10 @@ const ScreenplayShell = () => {
         id="screenplays-header"
         className="space-y-6 w-5/6 md:w-2/3 mx-auto mt-4 p-4"
       >
-        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold">
+        <h1 className="text-3xl md:text-5xl text-center text-hs-title font-bold font-title">
           Screenplays
         </h1>
-        <p className="text-justify md:text-xl text-hs-body font-medium leading-relaxed">
+        <p className="text-justify md:text-xl text-hs-body font-medium font-body leading-relaxed">
           {screenplayIntro}
         </p>
       </div>

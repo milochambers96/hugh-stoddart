@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="font-semibold md:text-lg 2xl:text-xl sm:text-base">
             {/* desktop navbar */}
             <div className="hidden md:flex justify-around">
-              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto">
+              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto font-interactive">
                 {navbarItems.slice(0, 2).map((item) => (
                   <li key={item.text}>
                     <Link
@@ -59,10 +59,14 @@ const Navbar = () => {
                 ))}
               </ul>
               <div className="text-center 2xl:px-20">
-                <h2 className="text-4xl text-hs-title">Hugh Stoddart</h2>
-                <h3 className="text-xl text-hs-subtitle">Screenwriter</h3>
+                <h2 className="text-4xl text-hs-title font-title">
+                  Hugh Stoddart
+                </h2>
+                <h3 className="text-xl text-hs-subtitle font-body">
+                  Screenwriter
+                </h3>
               </div>
-              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto">
+              <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto font-interactive">
                 {navbarItems.slice(2, navbarItems.length).map((item) => (
                   <li key={item.text}>
                     <Link

@@ -43,7 +43,7 @@ const ContactForm = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-hs-subtitle text-lg mb-2"
+              className="block text-hs-subtitle text-lg font-body mb-2"
             >
               Name
             </label>
@@ -52,14 +52,14 @@ const ContactForm = () => {
               id="name"
               name="name"
               required
-              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body font-interactive border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="email"
-              className="block text-hs-subtitle text-lg mb-2"
+              className="block text-hs-subtitle text-lg font-body mb-2"
             >
               Email
             </label>
@@ -68,14 +68,14 @@ const ContactForm = () => {
               id="email"
               name="email"
               required
-              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body font-interactive border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="subject"
-              className="block text-hs-subtitle text-lg mb-2"
+              className="block text-hs-subtitle text-lg font-body mb-2"
             >
               Subject
             </label>
@@ -84,14 +84,14 @@ const ContactForm = () => {
               id="subject"
               name="subject"
               required
-              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body font-interactive border border-white/20 focus:border-white/50 outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="message"
-              className="block text-hs-subtitle text-lg mb-2"
+              className="block text-hs-subtitle text-lg font-body mb-2"
             >
               Message
             </label>
@@ -100,14 +100,14 @@ const ContactForm = () => {
               name="message"
               required
               rows={6}
-              className="w-full p-2 rounded bg-white/10 text-hs-body border border-white/20 focus:border-white/50 outline-none resize-none"
+              className="w-full p-2 rounded bg-white/10 text-hs-body font-interactive border border-white/20 focus:border-white/50 outline-none resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body rounded transition-colors disabled:opacity-50"
+            className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body font-interactive rounded transition-colors disabled:opacity-50"
           >
             {isSubmitting
               ? "Sending...".toLocaleUpperCase()

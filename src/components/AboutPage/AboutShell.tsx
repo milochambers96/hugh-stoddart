@@ -11,19 +11,19 @@ const AboutShell = () => {
       <div className="hidden md:block">
         <article className="w-2/3 mx-auto px-4 pt-2 md:pb-10 2xl:pb-0">
           <div className="mt-10 md:mt-12 2xl:mt-20 mb-4">
-            <h1 className="ml-1 text-5xl text-hs-title font-bold italic">
+            <h1 className="ml-1 text-5xl text-hs-title font-bold font-title">
               A little bit about Hugh
             </h1>
           </div>
           <div className="flex gap-14 mx-auto">
-            <div className="flex-1 space-y-6 text-justify text-hs-body font-medium leading-relaxed">
+            <div className="flex-1 space-y-6 text-justify text-hs-body font-medium font-body leading-relaxed">
               <AboutParaOne />
               <AboutParaTwo />
               <AboutParaThree />
               <FellowshipsAndIMDB />
               <p>
                 Hugh is represented by{" "}
-                <span className="font-semibold">
+                <span className="font-semibold font-interactive">
                   <a href="https://swagency105621301.wordpress.com/">
                     Simon Williamson
                   </a>

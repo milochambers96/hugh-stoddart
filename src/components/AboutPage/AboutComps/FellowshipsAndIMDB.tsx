@@ -3,7 +3,7 @@ const FellowshipsAndIMDB = () => {
     <>
       <p className="leading-relaxed">
         Hugh currently holds an Honorary Fellowship at{" "}
-        <span className="font-bold">
+        <span className="font-semibold">
           <a href=" https://www.mmu.ac.uk/staff/profile/hugh-stoddart">
             Manchester Metropolitan University
           </a>
@@ -21,7 +21,7 @@ const FellowshipsAndIMDB = () => {
         {" "}
         Hugh's film and television writing and directing career is also
         documented on his{" "}
-        <span className="font-bold">
+        <span className="font-semibold font-interactive">
           <a href="https://www.imdb.com/name/nm0831142/">IMDB</a>
         </span>{" "}
         profile.

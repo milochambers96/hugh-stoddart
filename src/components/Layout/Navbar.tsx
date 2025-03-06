@@ -1,14 +1,32 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleBurger = () => {
     setIsActive(!isActive);
   };
+
+  // Add scroll listener to detect when to add background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navbarItems = [
     { text: "Home", path: "/" },
@@ -19,7 +37,11 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="fixed w-full bg-hs-card border-b-2 border-hs-card-border backdrop-blur-sm z-50">
+      <nav
+        className={`fixed w-full border-b-2 border-hs-card-border backdrop-blur-sm z-50 transition-all duration-300 ${
+          scrolled ? "bg-hs-card/70" : "bg-hs-card"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="font-semibold md:text-lg 2xl:text-xl sm:text-base">
             {/* desktop navbar */}
@@ -37,8 +59,8 @@ const Navbar = () => {
                 ))}
               </ul>
               <div className="text-center 2xl:px-20">
-                <p className="text-4xl text-hs-title">Hugh Stoddard</p>
-                <p className="text-xl text-hs-subtitle">Screenwriter</p>
+                <h2 className="text-4xl text-hs-title">Hugh Stoddart</h2>
+                <h3 className="text-xl text-hs-subtitle">Screenwriter</h3>
               </div>
               <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto">
                 {navbarItems.slice(2, navbarItems.length).map((item) => (

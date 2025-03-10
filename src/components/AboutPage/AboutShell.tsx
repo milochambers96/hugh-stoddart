@@ -24,7 +24,11 @@ const AboutShell = () => {
               <p>
                 Hugh is represented by{" "}
                 <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
-                  <a href="https://swagency105621301.wordpress.com/">
+                  <a
+                    href="https://swagency105621301.wordpress.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Simon Williamson
                   </a>
                 </span>
@@ -68,7 +72,11 @@ const AboutShell = () => {
           <p className="text-hs-body font-medium">
             Hugh is represented by{" "}
             <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
-              <a href="https://swagency105621301.wordpress.com/">
+              <a
+                href="https://swagency105621301.wordpress.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Simon Williamson
               </a>
             </span>

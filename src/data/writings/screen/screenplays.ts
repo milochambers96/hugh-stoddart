@@ -251,6 +251,15 @@ export const screenplays: Screenplay[] = [
     media: {
       image: rememberanceImg,
     },
+    streaming: {
+      isStreaming: true,
+      available: [
+        {
+          service: "Prime Video",
+          path: "amazon.co.uk/gp/video/detail/B09276XKG3/ref=atv_sr_fle_c_srce7a38_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B0D81K6LYV&qid=1741616055741",
+        },
+      ],
+    },
     reviews: {
       hasReview: true,
       reviews: [
@@ -415,6 +424,15 @@ export const screenplays: Screenplay[] = [
       "Based on the novel by J.R. Ackerley, set in London just after World War 2. It is a black comedy about a love triangle - between two men and a dog. Following a cinema release in the U.S, the video continued on sale there for fifteen years.",
     media: {
       image: worldOfYouImg,
+    },
+    streaming: {
+      isStreaming: true,
+      available: [
+        {
+          service: "Prime Video",
+          path: "https://www.amazon.co.uk/Think-World-You-Alan-Bates/dp/B09L6PN84Y/ref=tmm_aiv_swatch_0?_encoding=UTF8&qid=1459290535&sr=1-1",
+        },
+      ],
     },
     reviews: {
       hasReview: true,

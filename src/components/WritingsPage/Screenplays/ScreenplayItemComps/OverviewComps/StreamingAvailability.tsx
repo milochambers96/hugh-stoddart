@@ -12,7 +12,12 @@ const StreamingAvailability = ({ screen }: StreamingAvailabilityProp) => {
       {screen.streaming.available.length === 1 ? (
         <p>
           Available to watch on{" "}
-          <a href={screen.streaming.available[0].path}>
+          <a
+            href={screen.streaming.available[0].path}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-hs-link hover:text-hs-link-hover transition-color duration-500 font-bold"
+          >
             {screen.streaming.available[0].service}
           </a>
           .
@@ -23,7 +28,14 @@ const StreamingAvailability = ({ screen }: StreamingAvailabilityProp) => {
           <ul className="ml-2 mt-2 space-y-1 list-disc list-inside">
             {screen.streaming.available.map((platform, index) => (
               <li key={index}>
-                <a href={platform.path}>{platform.service}</a>
+                <a
+                  href={platform.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-hs-link hover:text-hs-link-hover transition-color duration-500 font-bold"
+                >
+                  {platform.service}{" "}
+                </a>
               </li>
             ))}
           </ul>

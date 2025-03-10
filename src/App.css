@@ -1,3 +1,8 @@
+html {
+  background-color: #2e2e2e;
+  overscroll-behavior: none;
+}
+
 @media (min-width: 768px) {
   #theatre-shell .swiper {
     position: relative;
@@ -31,7 +36,7 @@
     margin-top: -25px;
     z-index: 10;
     cursor: pointer;
-    color: #000;
+    color: #fbbf24;
   }
 
   #theatre-shell .swiper-button-next {
@@ -40,5 +45,10 @@
 
   #theatre-shell .swiper-button-prev {
     left: 0;
+  }
+
+  #theatre-shell .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    background: #fbbf24;
   }
 }

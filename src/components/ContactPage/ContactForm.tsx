@@ -103,16 +103,17 @@ const ContactForm = () => {
               className="w-full p-2 rounded bg-white/10 text-hs-body font-interactive border border-white/20 focus:border-white/50 outline-none resize-none"
             />
           </div>
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full py-2 px-4 rounded-lg font-semibold font-interactive text-hs-button-text uppercase transition-all bg-hs-button hover:bg-hs-button-hover active:scale-95 shadow-md"
-          >
-            {isSubmitting
-              ? "Sending...".toLocaleUpperCase()
-              : "Send Message".toLocaleUpperCase()}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full md:w-1/3 py-2 px-4 rounded-lg font-semibold font-interactive text-hs-button-text uppercase transition-all bg-hs-button hover:bg-hs-button-hover active:scale-95 shadow-md"
+            >
+              {isSubmitting
+                ? "Sending...".toLocaleUpperCase()
+                : "Send Message".toLocaleUpperCase()}
+            </button>
+          </div>
 
           {error && (
             <div className="mt-4 p-4 bg-red-500/20 text-red-200 rounded">

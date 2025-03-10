@@ -75,8 +75,10 @@ const ImageCard = ({ script, isMobile }: ImgCardProps) => {
           <ul className="space-y-2">
             {script.reviews?.map((review, index) => (
               <li key={index}>
-                <span className="italic">"{review.comment}."</span> -{" "}
-                <span className="font-semibold">{review.author}</span>,{" "}
+                <span className="italic text-hs-accent">
+                  "{review.comment}."
+                </span>{" "}
+                - <span className="font-semibold">{review.author}</span>,{" "}
                 {review.publisher ? review.publisher + "," : ""} {review.city}{" "}
                 {review.when}.
               </li>

@@ -33,8 +33,10 @@ const ImagelessCard = ({ script }: ImglessCardProp) => {
           <ul>
             {script.reviews?.map((review, index) => (
               <li key={index}>
-                <span className="italic">"{review.comment}"</span> -{" "}
-                <span className="font-semibold">{review.author}</span>,{" "}
+                <span className="italic text-hs-accent">
+                  "{review.comment}."
+                </span>{" "}
+                - <span className="font-semibold">{review.author}</span>,{" "}
                 {review.publisher}.
               </li>
             ))}

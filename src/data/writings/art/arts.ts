@@ -1,3 +1,16 @@
+import alisonWilding from "./articles/alison_wilding.pdf";
+import chrisBurden from "./articles/chris_burden.pdf";
+import corneliaParker from "./articles/cornelia_parker.pdf";
+import davidNash from "./articles/david_nash.pdf";
+import enoPaladino from "./articles/eno_paladino.pdf";
+import helenSear from "./articles/helen_sear.pdf";
+import jackieWinsor from "./articles/jackie_winsor.pdf";
+import martinBoyce from "./articles/martin_boyce.pdf";
+import mikeNelson from "./articles/mike_nelson.pdf";
+import peterKennard from "./articles/peter_kennard.pdf";
+import seanScully from "./articles/sean_scully.pdf";
+import terryFrost from "./articles/terry_frost.pdf";
+
 export interface ArtText {
   id: number;
   fName?: string;
@@ -5,7 +18,7 @@ export interface ArtText {
   type: "article" | "review" | "essay" | "other";
   purpose: string;
   publishText?: string[];
-  pdf: string;
+  pdf?: string;
 }
 
 export interface ArtTexts {
@@ -21,7 +34,6 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article in The Independent",
       publishText: ["Whitechapel Gallery July 7 | August 27 2000"],
-      pdf: "placeholder",
     },
     {
       id: 2,
@@ -30,7 +42,6 @@ export const artTexts: ArtTexts = {
       type: "essay",
       purpose: "Catalogue essay | Solo show",
       publishText: ["Flowers Central | October 2003"],
-      pdf: "placeholder",
     },
     {
       id: 3,
@@ -41,7 +52,6 @@ export const artTexts: ArtTexts = {
       publishText: [
         "LET ME SEE IF THIS BE REAL NAi Rotterdam, 1999. ISBN 90-5662-137-8",
       ],
-      pdf: "placeholder",
     },
     {
       id: 4,
@@ -50,7 +60,6 @@ export const artTexts: ArtTexts = {
       type: "other",
       purpose: "Commissioned prose work to accompany a suite of prints",
       publishText: ["Grizedale Residency May 2000"],
-      pdf: "placeholder",
     },
     {
       id: 5,
@@ -59,7 +68,7 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Review for Contemporary Visual Arts no.22 1999",
       publishText: ["Lotte Hammer Gallery London, 29 January - 6 March"],
-      pdf: "placeholder",
+      pdf: martinBoyce,
     },
     {
       id: 6,
@@ -67,7 +76,6 @@ export const artTexts: ArtTexts = {
       lName: "Breakwell",
       type: "review",
       purpose: "Review for Frieze Nov/Dec 1999 Auditorium",
-      pdf: "placeholder",
     },
     {
       id: 7,
@@ -76,19 +84,17 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article in The Independent.",
       publishText: ["Grizedale Residency May 2000"],
-      pdf: "placeholder",
+      pdf: chrisBurden,
     },
     {
       id: 8,
-      fName: "Chris",
-      lName: "Burden",
-      type: "article",
-      purpose: "Article in The Independent",
+      fName: "Rosemary",
+      lName: "Butcher",
+      type: "essay",
+      purpose: "Essay included in Rosemary Butcher - Choreography",
       publishText: [
-        "Grizedale Residency May 2000",
-        "Book review, Art World, Feb-Mar 2009",
+        "Collisions and Collaborations Middlesex University Press ISBN: 1 904750 47 8",
       ],
-      pdf: "placeholder",
     },
     {
       id: 10,
@@ -97,7 +103,6 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Review for Contemporary Visual Arts no 21 1998",
       publishText: ["Kettles Yard, Cambridge September 26 - November 1"],
-      pdf: "placeholder",
     },
     {
       id: 11,
@@ -106,7 +111,7 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Review for Contemporary Visual Arts no 26 2000",
       publishText: ["Roundhouse, London September 9 - October 6"],
-      pdf: "placeholder",
+      pdf: enoPaladino,
     },
     {
       id: 12,
@@ -115,7 +120,6 @@ export const artTexts: ArtTexts = {
       type: "essay",
       purpose: "Catalogue essay 'Meridiano de Greenwich'",
       publishText: ["Madrid / London May 2002"],
-      pdf: "placeholder",
     },
     {
       id: 13,
@@ -124,7 +128,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for RA Magazine | Solo Show",
       publishText: ["Royal Academy Autumn 2000"],
-      pdf: "placeholder",
+      pdf: terryFrost,
     },
     {
       id: 14,
@@ -132,7 +136,6 @@ export const artTexts: ArtTexts = {
       lName: "Haselden",
       type: "review",
       purpose: "Review for Art & Architecture no 53 1999",
-      pdf: "placeholder",
     },
     {
       id: 15,
@@ -141,7 +144,7 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Book review for Contemporary Visual Arts no.28 2000",
       publishText: ["Published by Manchester University Press"],
-      pdf: "placeholder",
+      pdf: peterKennard,
     },
     {
       id: 16,
@@ -149,7 +152,6 @@ export const artTexts: ArtTexts = {
       lName: "Kivland",
       type: "review",
       purpose: "Book review for Contemporary Visual Arts no.26 2000",
-      pdf: "placeholder",
     },
     {
       id: 17,
@@ -157,7 +159,7 @@ export const artTexts: ArtTexts = {
       lName: "Nash",
       type: "article",
       purpose: "Article for World of Interiors August 2002",
-      pdf: "placeholder",
+      pdf: davidNash,
     },
     {
       id: 18,
@@ -168,7 +170,7 @@ export const artTexts: ArtTexts = {
       publishText: [
         "THE CORAL REEF Matt's Gallery, London 26 January - 26 March 2000",
       ],
-      pdf: "placeholder",
+      pdf: mikeNelson,
     },
     {
       id: 19,
@@ -177,7 +179,6 @@ export const artTexts: ArtTexts = {
       type: "essay",
       purpose: "Contributing essay in book edited by Brian Lynch",
       publishText: ["Published by Scolar Press ISBN-10: 1859282350"],
-      pdf: "placeholder",
     },
     {
       id: 20,
@@ -185,7 +186,6 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for the Independent",
       publishText: ["Hayward Gallery February 10 – April 2 2000"],
-      pdf: "placeholder",
     },
     {
       id: 21,
@@ -194,7 +194,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for Contemporary Visual Arts no.19 1998",
       publishText: ["Serpentine Gallery 12 May – 14 June"],
-      pdf: "placeholder",
+      pdf: corneliaParker,
     },
     {
       id: 22,
@@ -203,7 +203,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for Contemporary Visual Arts no.23 1999",
       publishText: ["South London Gallery 16 June – 1 August"],
-      pdf: "placeholder",
+      pdf: seanScully,
     },
     {
       id: 23,
@@ -212,7 +212,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for Contemporary Visual Arts no.24 1999",
       publishText: ["Angel Row Gallery 12 June – 12 July"],
-      pdf: "placeholder",
+      pdf: helenSear,
     },
     {
       id: 24,
@@ -220,7 +220,6 @@ export const artTexts: ArtTexts = {
       lName: "Sutton",
       type: "essay",
       purpose: "Catalogue essay Flowers East April 1998",
-      pdf: "placeholder",
     },
     {
       id: 25,
@@ -231,7 +230,7 @@ export const artTexts: ArtTexts = {
       publishText: [
         "Henry Moore Foundation Studio, Halifax 18 October - 31 January",
       ],
-      pdf: "placeholder",
+      pdf: alisonWilding,
     },
     {
       id: 26,
@@ -240,7 +239,7 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Review for Contemporary Visual Arts P.S.1",
       publishText: ["New York 26 October 1997 - 1 March 1998"],
-      pdf: "placeholder",
+      pdf: jackieWinsor,
     },
   ],
 };

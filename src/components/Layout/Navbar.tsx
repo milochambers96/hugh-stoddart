@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -6,11 +6,14 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const toggleBurger = () => {
     setIsActive(!isActive);
   };
 
-  // Add scroll listener to detect when to add background
+  //  Scroll listener
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -22,7 +25,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up
+    // Scroll Clean up
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -58,14 +61,16 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="text-center 2xl:px-20">
-                <h2 className="text-4xl text-hs-title font-title">
-                  Hugh Stoddart
-                </h2>
-                <h3 className="text-xl text-hs-subtitle font-body">
-                  Screenwriter
-                </h3>
-              </div>
+              {!isHomePage && (
+                <div className="text-center 2xl:px-20">
+                  <h2 className="text-4xl text-hs-title font-title">
+                    Hugh Stoddart
+                  </h2>
+                  <h3 className="text-xl text-hs-subtitle font-body">
+                    Screenwriter
+                  </h3>
+                </div>
+              )}
               <ul className="md:flex text-hs-link md:gap-14 2xl:gap-24 my-auto font-interactive">
                 {navbarItems.slice(2, navbarItems.length).map((item) => (
                   <li key={item.text}>

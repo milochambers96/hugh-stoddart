@@ -9,11 +9,11 @@ const NextButton = ({ screenIdNum }: { screenIdNum: number }) => {
   return (
     <Link to={`/Writings/Screenplays/${nextId}`}>
       <button
-        className={`px-4 py-2 rounded-lg font-semibold text-white uppercase transition-all min-w-[112.03px]
+        className={`px-4 py-2 rounded-lg font-semibold   text-hs-button-text uppercase transition-all min-w-[112.03px]
           ${
             isDisabled
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-hs-accent hover:bg-opacity-80 active:scale-95 shadow-md"
+              ? "border border-hs-ghost-border text-hs-ghost-text hover:bg-hs-ghost-hover-bg hover:text-hs-ghost-hover-text hover:border-hs-ghost-hover-border active:scale-95 cursor-not-allowed"
+              : "border border-hs-button bg-hs-button hover:bg-hs-button-hover active:scale-95 shadow-md"
           }
         `}
         disabled={isDisabled}

@@ -45,7 +45,7 @@ const QuadPillTab = ({
     <div className="relative bg-hs-accent/70 rounded-full px-2 py-3 flex w-80">
       {/* Sliding background */}
       <div
-        className={`absolute top-1 h-[calc(100%-8px)] w-[calc(25%-4px)] rounded-full transition-all duration-300 ease-in-out bg-hs-accent
+        className={`absolute top-1 h-[calc(100%-8px)] w-[calc(25%-4px)] rounded-full transition-all duration-300 ease-in-out bg-hs-button
               ${
                 display === option2
                   ? "translate-x-full"
@@ -63,7 +63,9 @@ const QuadPillTab = ({
         className="w-1/4 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option1 ? "text-white" : "text-hs-secondary"}
+          className={
+            display === option1 ? "text-hs-title" : "text-hs-button-text"
+          }
         >
           {opt1Text}
         </span>
@@ -73,7 +75,9 @@ const QuadPillTab = ({
         className="w-1/4 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option2 ? "text-white" : "text-hs-secondary"}
+          className={
+            display === option2 ? "text-hs-title" : "text-hs-button-text"
+          }
         >
           {opt2Text}
         </span>
@@ -83,7 +87,9 @@ const QuadPillTab = ({
         className="w-1/4 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option3 ? "text-white" : "text-hs-secondary"}
+          className={
+            display === option3 ? "text-hs-title" : "text-hs-button-text"
+          }
         >
           {opt3Text}
         </span>
@@ -93,7 +99,9 @@ const QuadPillTab = ({
         className="w-1/4 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option4 ? "text-white" : "text-hs-secondary"}
+          className={
+            display === option4 ? "text-hs-title" : "text-hs-button-text"
+          }
         >
           {opt4Text}
         </span>

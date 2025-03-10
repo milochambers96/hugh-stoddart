@@ -107,7 +107,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body font-interactive rounded transition-colors disabled:opacity-50"
+            className="w-full py-2 px-4 rounded-lg font-semibold font-interactive text-hs-button-text uppercase transition-all bg-hs-button hover:bg-hs-button-hover active:scale-95 shadow-md"
           >
             {isSubmitting
               ? "Sending...".toLocaleUpperCase()
@@ -132,7 +132,7 @@ const ContactForm = () => {
           </div>
           <button
             onClick={() => setIsSuccess(false)}
-            className="w-2/3 py-2 px-4 bg-white/10 hover:bg-white/20 text-hs-body rounded transition-colors"
+            className="w-2/3 py-2 px-4 rounded-lg font-semibold font-interactive text-hs-button-text uppercase transition-all bg-hs-button hover:bg-hs-button-hover active:scale-95 shadow-md"
           >
             SEND ANOTHER MESSAGE
           </button>

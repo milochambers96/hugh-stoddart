@@ -12,19 +12,22 @@ module.exports = {
           title: "#EEEEEE",
           subtitle: "#BBBBBB",
           body: "#D9D9D9",
+          accent: "#fbbf24",
 
           card: "#2E2E2E",
           "card-border": "#3D3D3D",
 
-          // "card-bk": "BBC4AE",
-          // "card-border": "5C6A63",
+          // Main button colors
+          button: "#9C7A41",
+          "button-hover": "#7D623A",
+          "button-text": "#F5F1E8",
 
-          accent: "#5C6A63",
-          secondary: "#4A6E73",
-          link: "#00A8A8",
-          "link-hover": "#A0D9D9",
-          muted: "#555555",
-          "button-accent": "#8A3D3D",
+          // Ghost button colors
+          "ghost-border": "#B8A17C",
+          "ghost-text": "#B8A17C",
+          "ghost-hover-bg": "rgba(156, 122, 65, 0.15)",
+          "ghost-hover-text": "#CEBA9C",
+          "ghost-hover-border": "#CEBA9C",
         },
       },
       fontFamily: {

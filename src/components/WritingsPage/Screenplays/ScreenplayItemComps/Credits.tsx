@@ -32,7 +32,7 @@ const Credits = ({ screen }: CreditProp) => {
   };
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-4">
       {formatCredits(screen.writters, "Written by")}
       {formatCredits(screen.directors, "Directed by")}
       {formatCredits(screen.cast, "Starring")}

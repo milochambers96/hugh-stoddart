@@ -28,10 +28,10 @@ const DualPillTab = ({ display, setDisplay, option1, option2 }: PillProps) => {
   }, [infoToRender]);
 
   return (
-    <div className="relative bg-hs-accent/70 rounded-full p-1 flex w-48 font-redhat">
+    <div className="relative bg-hs-accent/70 rounded-full p-1 flex w-48">
       {/* Sliding background */}
       <div
-        className={`absolute top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out bg-hs-accent
+        className={`absolute top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out bg-hs-accent/60
               ${display === option2 ? "translate-x-full" : "translate-x-0"}`}
       />
 
@@ -41,7 +41,7 @@ const DualPillTab = ({ display, setDisplay, option1, option2 }: PillProps) => {
         className="w-1/2 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option1 ? "text-white" : "text-hs-secondary"}
+          className={display === option1 ? "text-white" : "text-hs-button-text"}
         >
           {opt1Text}
         </span>
@@ -51,7 +51,7 @@ const DualPillTab = ({ display, setDisplay, option1, option2 }: PillProps) => {
         className="w-1/2 rounded-full py-1 text-sm font-medium transition-colors relative z-10"
       >
         <span
-          className={display === option2 ? "text-white" : "text-hs-secondary"}
+          className={display === option2 ? "text-white" : "text-hs-button-text"}
         >
           {opt2Text}
         </span>

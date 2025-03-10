@@ -13,6 +13,11 @@ module.exports = {
           subtitle: "#BBBBBB",
           body: "#D9D9D9",
           accent: "#fbbf24",
+          "accent-hover": "#FFF0B3",
+
+          // Link text colours
+          link: "#4DAECC", // Option 1: Teal Blue
+          "link-hover": "#67C7E5",
 
           card: "#2E2E2E",
           "card-border": "#3D3D3D",

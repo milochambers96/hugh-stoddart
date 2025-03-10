@@ -51,7 +51,7 @@ const Navbar = () => {
                   <li key={item.text}>
                     <Link
                       to={item.path}
-                      className="hover:text-hs-link-hover transition-colors duration-500"
+                      className=" text-hs-accent hover:text-hs-accent-hover transition-colors duration-500"
                     >
                       {item.text}
                     </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
                   <li key={item.text}>
                     <Link
                       to={item.path}
-                      className="hover:text-hs-link-hover transition-colors duration-500"
+                      className=" text-hs-accent hover:text-hs-accent-hover transition-colors duration-500"
                     >
                       {item.text}
                     </Link>
@@ -88,7 +88,11 @@ const Navbar = () => {
                 aria-label="toggle menu"
               >
                 {" "}
-                {isActive ? <HiX size={24} /> : <HiMenu size={24} />}
+                {isActive ? (
+                  <HiX size={24} className="text-red-900" />
+                ) : (
+                  <HiMenu size={24} className="text-hs-accent" />
+                )}
               </button>
             </div>
 
@@ -98,7 +102,7 @@ const Navbar = () => {
                 absolute
                 left-0
                 right-0
-                bg-hs-accent/85
+                bg-hs-card/85
                 backdrop-blur-sm
                 transform
                 transition-all
@@ -112,7 +116,7 @@ const Navbar = () => {
                   <li key={item.text}>
                     <Link
                       to={item.path}
-                      className="hover:text-hs-link-hover transition-colors duration-500"
+                      className="text-hs-accent hover:text-hs-accent-hover transition-colors duration-500"
                       onClick={toggleBurger}
                     >
                       {item.text}

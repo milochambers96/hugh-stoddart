@@ -23,7 +23,7 @@ const AboutShell = () => {
               <FellowshipsAndIMDB />
               <p>
                 Hugh is represented by{" "}
-                <span className="font-semibold font-interactive">
+                <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
                   <a href="https://swagency105621301.wordpress.com/">
                     Simon Williamson
                   </a>
@@ -67,7 +67,7 @@ const AboutShell = () => {
           </div>
           <p className="text-hs-body font-medium">
             Hugh is represented by{" "}
-            <span className="font-semibold">
+            <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
               <a href="https://swagency105621301.wordpress.com/">
                 Simon Williamson
               </a>

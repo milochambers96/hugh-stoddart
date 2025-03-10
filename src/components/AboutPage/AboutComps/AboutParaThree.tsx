@@ -2,7 +2,7 @@ const AboutParaThree = () => {
   return (
     <p>
       He co-founded{" "}
-      <span className="italic font-bold">
+      <span className="italic font-bold text-hs-link hover:text-hs-link-hover transition-colors duration-500">
         <a href="http://localhost:5173/Writings/Prison">Not Shut Up</a>
       </span>{" "}
       in 2003, and alsonside his own work, became its managing editor until

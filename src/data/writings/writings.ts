@@ -1,3 +1,6 @@
+import screenImg from "../../assets/screenplay-imgs/mill-on-the-floss-img.jpg";
+import theatreImg from "../../assets/writing-page-imgs/gibaltar-straight-img.jpg";
+import visualArtImg from "../../assets/screenplay-imgs/big-bittalions-img.jpg";
 import notShutUpImg from "../../assets/writing-page-imgs/not-shut-up-issue-7.jpg";
 
 export const writingsIntro =
@@ -7,7 +10,7 @@ export const writingsOverview = [
   {
     id: 1,
     title: "Screenplays",
-    image: "http://hughstoddart.co.uk/images/screen/mill-on-the-floss.jpg",
+    image: screenImg,
     imgAlt: "A still shot from one of Hugh's screenplays.",
     navPath: "/Writings/Screenplays",
     capTxt:
@@ -17,7 +20,7 @@ export const writingsOverview = [
   {
     id: 2,
     title: "Theatre",
-    image: "http://hughstoddart.co.uk/images/theatre/gibaltar.jpg",
+    image: theatreImg,
     imgAlt: "A photograph of a performance of Hugh's theatre scripts.",
     navPath: "/Writings/Theatre",
     capTxt:
@@ -27,7 +30,7 @@ export const writingsOverview = [
   {
     id: 3,
     title: "Visual Arts",
-    image: "http://hughstoddart.co.uk/images/screen/big-bittalions.jpg",
+    image: visualArtImg,
     imgAlt: "A photograph of a performance of Hugh's theatre scripts.",
     navPath: "/Writings/TheArts",
     capTxt:

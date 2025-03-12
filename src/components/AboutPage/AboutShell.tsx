@@ -50,11 +50,11 @@ const AboutShell = () => {
       <div className="md:hidden mt-6 pb-10">
         <article className="w-5/6 space-y-6 mx-auto text-justify">
           <div className="mt-10 text-center">
-            <h1 className="text-3xl text-hs-title font-bold italic">
+            <h1 className="text-3xl text-hs-title font-bold font-title">
               A little bit about Hugh
             </h1>
           </div>
-          <div className="space-y-6 leading-relaxed text-hs-body font-medium">
+          <div className="space-y-6 leading-relaxed text-hs-body font-medium font-body">
             <AboutParaOne />
             <AboutParaTwo />
             <AboutParaThree />
@@ -66,10 +66,10 @@ const AboutShell = () => {
               className="mx-auto shadow-lg rounded-sm"
             />
           </div>
-          <div className="space-y-6 leading-relaxed text-hs-body font-medium">
+          <div className="space-y-6 leading-relaxed text-hs-body font-medium font-body">
             <FellowshipsAndIMDB />
           </div>
-          <p className="text-hs-body font-medium">
+          <p className="text-hs-body font-medium font-body">
             Hugh is represented by{" "}
             <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
               <a

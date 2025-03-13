@@ -6,6 +6,7 @@ import BackButton from "../../Utility/BackButton";
 import DetailsSubtitle from "./ScreenplayItemComps/DetailsSubtitle";
 import Overview from "./ScreenplayItemComps/Overview";
 import Credits from "./ScreenplayItemComps/Credits";
+import ArtCredits from "./ScreenplayItemComps/ArtCredits";
 import MediaDisplay from "./ScreenplayItemComps/MediaDisplay";
 import PreviousButton from "./ScreenplayItemComps/PreviousButton";
 import NextButton from "./ScreenplayItemComps/NextButton";
@@ -46,7 +47,7 @@ const ScreenplayItemShell = () => {
         <div className="relative">
           {/* Title */}
           <div className="text-center font-title">
-            <h1 className="text-3xl text-hs-title md:text-5xl font-bold">
+            <h1 className="text-3xl text-hs-title md:text-4xl font-bold">
               {screenItem?.title}
             </h1>
             {screenItem && (
@@ -79,7 +80,7 @@ const ScreenplayItemShell = () => {
           <div className="flex justify-between gap-x-10 relative">
             {/* Text column */}
             <div className="flex-1 leading-relaxed px-2 text-hs-body">
-              <div className="mt-2 py-2 flex justify-center mb-2 font-interative">
+              <div className="mt-2 py-2 flex justify-center mb-2 font-interactive">
                 <DualPillTab
                   display={display}
                   setDisplay={setDisplay}
@@ -87,12 +88,15 @@ const ScreenplayItemShell = () => {
                   option2={"credits"}
                 />
               </div>
-              <div className="font-interactive text-[0.88rem]">
+              <div className="font-body text-hs-body text-medium">
                 {screenItem && display === "overview" && (
                   <Overview screen={screenItem} />
                 )}
                 {screenItem && display === "credits" && (
-                  <Credits screen={screenItem} />
+                  <>
+                    <Credits screen={screenItem} />
+                    <ArtCredits screen={screenItem} />
+                  </>
                 )}
               </div>
             </div>
@@ -134,7 +138,7 @@ const ScreenplayItemShell = () => {
           </div>
 
           {/* Tabs */}
-          <div className="mt-8 py-2 flex justify-center">
+          <div className="mt-8 py-2 flex justify-center font-interactive">
             <DualPillTab
               display={display}
               setDisplay={setDisplay}
@@ -144,7 +148,7 @@ const ScreenplayItemShell = () => {
           </div>
 
           {/* Content */}
-          <div className="mt-4 text-hs-body">
+          <div className="mt-4 text-hs-body font-body">
             {screenItem && display === "overview" && (
               <Overview screen={screenItem} />
             )}

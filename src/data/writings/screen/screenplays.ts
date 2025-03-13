@@ -210,7 +210,7 @@ export const screenplays: Screenplay[] = [
           {
             type: "TV",
             channel: "Channel 4",
-            date: 1982,
+            date: 2018,
             wasRepeated: true,
             repeatMessage:
               "Repeated on Channel 4 in 2018 to celebrate Gary Oldman",
@@ -224,19 +224,12 @@ export const screenplays: Screenplay[] = [
             link: "https://plymouthartscinema.org/remembrance-a-film-that-will-mean-a-lot-to-anybody-from-plymouth/",
           },
 
-          // {
-          //   type: "Special Re-run",
-          //   message: "Repeated on Channel 4 in 2018 to celebrate Gary Oldman.",
-          //   location: "TV Screening",
-          //   date: [2018],
-          // },
-
           {
-            type: "Restoration",
+            type: "Purchase",
             message:
               "This film has been restored and is now available as a blu-ray from",
             "link-text": "BFI Shop",
-            link: "placeholder",
+            link: "https://shop.bfi.org.uk/remembrance-flipside-048-blu-ray.html?srsltid=AfmBOop6OKoKiQKijmZEVgNyDEuG3yi5yYIhIHnRHGg6dKp6e-opC74w",
           },
         ],
       },
@@ -256,7 +249,7 @@ export const screenplays: Screenplay[] = [
       available: [
         {
           service: "Prime Video",
-          path: "amazon.co.uk/gp/video/detail/B09276XKG3/ref=atv_sr_fle_c_srce7a38_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B0D81K6LYV&qid=1741616055741",
+          path: "https://www.amazon.co.uk/gp/video/detail/B09276XKG3/ref=atv_sr_fle_c_srce7a38_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B0D81K6LYV&qid=1741791866398",
         },
       ],
     },
@@ -605,8 +598,8 @@ export const screenplays: Screenplay[] = [
 
   {
     id: 10,
-    title: "My Passage Through a Brieft Unity",
-    type: "Art Film",
+    title: "My Passage Through a Brief Unity in Time",
+    type: "Artist Film",
     year: 2010,
     duration: 13,
     directors: ["Janet Hodgson"],

@@ -7,6 +7,8 @@ interface CreditProp {
 }
 
 const Credits = ({ screen }: CreditProp) => {
+  if (screen.type === "Art Film") return null;
+
   const formatCredits = (people: string[] | undefined, role: string) => {
     if (!people) return null;
 

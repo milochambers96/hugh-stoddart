@@ -10,9 +10,9 @@ const PreviousButton: React.FC<PreviousButtonProps> = ({ screenIdNum }) => {
   const lastScreenId = screenIds[screenIds.length - 1];
   const isDisabled = screenIdNum === lastScreenId;
 
-  let prevScreenId = screenIdNum + 1;
-  if (screenIdNum === 9) prevScreenId = 11;
-  if (screenIdNum === 11) prevScreenId = 12;
+  const prevScreenId = screenIdNum + 1;
+  // if (screenIdNum === 9) prevScreenId = 11;
+  // if (screenIdNum === 11) prevScreenId = 12;
 
   return (
     <Link to={`/Writings/Screenplays/${prevScreenId}`}>

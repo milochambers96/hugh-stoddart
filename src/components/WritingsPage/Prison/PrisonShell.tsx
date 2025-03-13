@@ -46,26 +46,20 @@ const PrisonShell = () => {
             <p>{txtConts[0]}</p>
             <p>{txtConts[1]}</p>
           </div>
-          <div className="flex gap-x-14 justify-center">
-            <div className="w-2/5">
-              <div className="h-[420px]">
-                <img
-                  src={prisonInfo.images[0]}
-                  alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                  className="w-full h-full object-contain"
-                />
+          <div className="flex gap-x-2">
+            {prisonInfo.images.map((img, index) => (
+              <div key={index} className="w-2/5">
+                <div className="h-[420px]">
+                  <img
+                    src={prisonInfo.images[index]}
+                    alt="A cover for an issue of the magazine, 'Not Shut Up'"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="w-2/5">
-              <div className="h-[420px]">
-                <img
-                  src={prisonInfo.images[1]}
-                  alt="A cover for an issue of the magazine, 'Not Shut Up'"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
+            ))}
           </div>
+
           <div className="px-12 space-y-6 pt-3">
             <p>{txtConts[2]}</p>
             <p>{txtConts[3]}</p>

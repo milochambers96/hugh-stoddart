@@ -4,7 +4,9 @@ const NextButton = ({ screenIdNum }: { screenIdNum: number }) => {
   const isDisabled = screenIdNum === 1;
 
   // Skip 10 logic (11 → 9 instead of 10)
-  const nextId = screenIdNum === 11 ? 9 : screenIdNum - 1;
+  // const nextId = screenIdNum === 11 ? 9 : screenIdNum - 1;
+
+  const nextId = (screenIdNum -= 1);
 
   return (
     <Link to={`/Writings/Screenplays/${nextId}`}>

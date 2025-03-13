@@ -5,8 +5,10 @@ import Reviews from "./OverviewComps/Reviews";
 import BroadcastHistory from "./OverviewComps/BroadcastHistory";
 import TheatricalRelease from "./OverviewComps/TheatricalRelease";
 import StreamingAvailability from "./OverviewComps/StreamingAvailability";
+import Excerpt from "./OverviewComps/Excerpt";
 import Festivals from "./OverviewComps/Festivals";
 import HardCopy from "./OverviewComps/HardCopy";
+import Purchase from "./OverviewComps/Purchase";
 
 interface OverviewProp {
   screen: Screenplay;
@@ -21,8 +23,10 @@ const Overview = ({ screen }: OverviewProp) => {
       <BroadcastHistory screen={screen} />
       <TheatricalRelease screen={screen} />
       <StreamingAvailability screen={screen} />
+      <Excerpt screen={screen} />
       <Festivals screen={screen} />
       <HardCopy screen={screen} />
+      <Purchase screen={screen} />
     </article>
   );
 };

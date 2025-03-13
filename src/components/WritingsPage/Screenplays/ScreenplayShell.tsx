@@ -32,7 +32,7 @@ const ScreenplayShell = () => {
         <div className="hidden md:block">
           <div className="grid grid-cols-3 gap-x-4 gap-y-20">
             {orderedScreenplay
-              .filter((screen) => screen.id !== 10)
+              // .filter((screen) => screen.id !== 10)
               .map((screen) => (
                 <article key={screen.id} className="col-span-1 mx-auto">
                   <ScreenplayFrame

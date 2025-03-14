@@ -1,11 +1,9 @@
 import { useMemo } from "react";
-
 import {
   screenplayIntro,
   screenplays,
 } from "../../../data/writings/screen/screenplays";
 import ScreenplayFrame from "./ScreenplayReelCard";
-
 import BackButton from "../../Utility/BackButton";
 
 const ScreenplayShell = () => {
@@ -13,7 +11,7 @@ const ScreenplayShell = () => {
 
   return (
     <section id="screenplays-shell" className="pt-[90px] pb-20">
-      <div className=" flex justify-end pr-6 pt-4">
+      <div className="flex justify-end pr-6 pt-4">
         <BackButton backUrl={"/Writings/"} />
       </div>
       <div
@@ -29,22 +27,25 @@ const ScreenplayShell = () => {
       </div>
 
       <div className="w-5/6 mx-auto mt-12 md:mt-16">
+        {/* Desktop View */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-3 gap-x-4 gap-y-20">
-            {orderedScreenplay
-              // .filter((screen) => screen.id !== 10)
-              .map((screen) => (
-                <article key={screen.id} className="col-span-1 mx-auto">
-                  <ScreenplayFrame
-                    imagePath={screen.media.image}
-                    title={screen.title}
-                    id={screen.id}
-                  />
-                </article>
-              ))}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+            {orderedScreenplay.map((screen) => (
+              <article
+                key={screen.id}
+                className="flex justify-center w-[30%] mb-16"
+              >
+                <ScreenplayFrame
+                  imagePath={screen.media.image}
+                  title={screen.title}
+                  id={screen.id}
+                />
+              </article>
+            ))}
           </div>
         </div>
 
+        {/* Mobile View  */}
         <div className="md:hidden flex flex-col items-center space-y-14">
           {orderedScreenplay
             .filter((screen) => screen.id !== 10)

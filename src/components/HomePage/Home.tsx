@@ -1,43 +1,43 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  // const [text, setText] = useState("");
+  // const [isDeleting, setIsDeleting] = useState(false);
+  // const [loopNum, setLoopNum] = useState(0);
+  // const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const phrases = [
-    "Crafting Cinematic Narratives",
-    "Bringing Words to Life on Stage",
-    "Visual Arts Commentary",
-    "Weaving Stories Across Mediums",
-  ];
+  // const phrases = [
+  //   "Crafting Cinematic Narratives",
+  //   "Bringing Words to Life on Stage",
+  //   "Visual Arts Commentary",
+  //   "Weaving Stories Across Mediums",
+  // ];
 
-  useEffect(() => {
-    const handleTyping = () => {
-      const i = loopNum % phrases.length;
-      const fullText = phrases[i];
+  // useEffect(() => {
+  //   const handleTyping = () => {
+  //     const i = loopNum % phrases.length;
+  //     const fullText = phrases[i];
 
-      setText(
-        isDeleting
-          ? fullText.substring(0, text.length - 1)
-          : fullText.substring(0, text.length + 1)
-      );
+  //     setText(
+  //       isDeleting
+  //         ? fullText.substring(0, text.length - 1)
+  //         : fullText.substring(0, text.length + 1)
+  //     );
 
-      setTypingSpeed(isDeleting ? 80 : 150);
+  //     setTypingSpeed(isDeleting ? 80 : 150);
 
-      if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 1500);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-      }
-    };
+  //     if (!isDeleting && text === fullText) {
+  //       setTimeout(() => setIsDeleting(true), 1500);
+  //     } else if (isDeleting && text === "") {
+  //       setIsDeleting(false);
+  //       setLoopNum(loopNum + 1);
+  //     }
+  //   };
 
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed, phrases]);
+  //   const timer = setTimeout(handleTyping, typingSpeed);
+  //   return () => clearTimeout(timer);
+  // }, [text, isDeleting, loopNum, typingSpeed, phrases]);
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen text-white">

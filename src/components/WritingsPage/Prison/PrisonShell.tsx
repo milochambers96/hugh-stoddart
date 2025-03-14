@@ -47,7 +47,7 @@ const PrisonShell = () => {
             <p>{txtConts[1]}</p>
           </div>
           <div className="flex gap-x-2">
-            {prisonInfo.images.map((img, index) => (
+            {prisonInfo.images.map((_img, index) => (
               <div key={index} className="w-2/5">
                 <div className="h-[420px]">
                   <img

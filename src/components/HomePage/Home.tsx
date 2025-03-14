@@ -47,12 +47,9 @@ const Home = () => {
       <h2 className="hidden md:block text-4xl mt-4 text-hs-subtitle font-body">
         Screen | Theatre | Art | Prison{" "}
       </h2>
-      <div className="md:hidden text-4xl mt-6 text-hs-subtitle font-body space-y-4 text-center">
-        <h2>Screen</h2>
-        <h2>Theatre</h2>
-        <h2>Art</h2>
-        <h2>Prison</h2>
-      </div>
+      <h2 className="md:hidden text-xl mt-6 text-hs-subtitle font-body font-semibold text-center">
+        Screen | Theatre | Art | Prison{" "}
+      </h2>
 
       {/* <div className="w-24 h-1 bg-hs-accent 0 mt-6 mb-4"></div> */}
 

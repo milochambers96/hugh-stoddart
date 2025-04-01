@@ -40,7 +40,7 @@ const Credits = ({ screen }: CreditProp) => {
       {formatCredits(screen.cast, "Starring")}
       {formatCredits(screen.producer, "Produced by")}
       {formatCredits(screen.musicians, "Music and score from")}
-      {formatCredits(screen.artist, "With artwork by")}
+      {formatCredits(screen.artist, "Sculpture by")}
     </article>
   );
 };

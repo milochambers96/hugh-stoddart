@@ -73,7 +73,7 @@ const AboutShell = () => {
             Hugh is represented by{" "}
             <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
               <a
-                href="https://swagency105621301.wordpress.com/"
+                href="http://www.swagency.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

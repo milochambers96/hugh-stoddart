@@ -31,7 +31,7 @@ const FellowshipsAndIMDB = () => {
         documented on his{" "}
         <span className="text-hs-link hover:text-hs-link-hover transition-colors duration-500">
           <a
-            href="https://www.imdb.com/name/nm0831142/"
+            href="https://www.imdb.com/name/nm0831024/?ref_=fn_all_nme_1"
             target="_blank"
             rel="noopener noreferrer"
           >

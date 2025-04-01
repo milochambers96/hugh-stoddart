@@ -347,7 +347,7 @@ export const screenplays: Screenplay[] = [
     cast: ["Suzanne Burden", "Tom Bell", "Michael Gough"],
     writters: ["Hugh Stoddart"],
     directors: ["Colin Gregg"],
-    producer: ["Andrée Jandelli"],
+    producer: ["Andrée Molyneux"],
     synopsis:
       "An original screenplay drawing on Hugh Stoddart's ten years in the world of contemporary art: an artist has to cope with her father's suicide.",
     media: {
@@ -397,11 +397,6 @@ export const screenplays: Screenplay[] = [
           },
         ],
       },
-
-      hardCopy: {
-        hasHardCopy: true,
-        format: "VHS / DVD",
-      },
     },
     cast: [
       "Alan Bates",
@@ -442,7 +437,7 @@ export const screenplays: Screenplay[] = [
     id: 7,
     title: "The Big Battalions",
     type: "TV Series",
-    episodes: 6,
+    episodes: 5,
     year: 1992,
     release: {
       broadcast: {
@@ -478,7 +473,7 @@ export const screenplays: Screenplay[] = [
       reviews: [
         {
           comment: "An intelligent and beautiful drama.",
-          author: "David Aaronovitch (Daily Mail)",
+          author: "Elizabeth Cowley (Daily Mail)",
         },
       ],
     },
@@ -509,6 +504,13 @@ export const screenplays: Screenplay[] = [
             channel: "BBC 4",
             date: 2004,
           },
+
+          {
+            type: "Purchase",
+            message: "Hardcopies are available to purchase from",
+            "link-text": "Amazon",
+            link: "https://shop.bfi.org.uk/remembrance-flipside-048-blu-ray.html?srsltid=AfmBOop6OKoKiQKijmZEVgNyDEuG3yi5yYIhIHnRHGg6dKp6e-opC74w",
+          },
         ],
       },
 
@@ -519,7 +521,7 @@ export const screenplays: Screenplay[] = [
     },
     cast: ["Emily Watson", "Bernard Hill", "Cheryl Campbell", "James Frain"],
     writters: ["Hugh Stoddart"],
-    directors: ["Graham Teakston"],
+    directors: ["Graham Theakston"],
     producer: ["Brian Eastman (Carnival Films)"],
     execProduction: ["David Thompson (BBC)"],
     synopsis:

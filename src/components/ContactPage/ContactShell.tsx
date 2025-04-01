@@ -9,7 +9,7 @@ const ContactShell = () => {
             Contact
           </h1>
           <h2 className="text-xl md:text-2xl text-hs-subtitle font-semibold font-body">
-            Complete the below form to get in touch with Hugh
+            Complete the form below to get in touch with Hugh
           </h2>
         </div>
         <ContactForm />

@@ -20,8 +20,8 @@ const Overview = ({ screen }: OverviewProp) => {
       <Synopsis screen={screen} />
       <Awards screen={screen} />
       <Reviews screen={screen} />
-      <BroadcastHistory screen={screen} />
       <TheatricalRelease screen={screen} />
+      <BroadcastHistory screen={screen} />
       <StreamingAvailability screen={screen} />
       <Excerpt screen={screen} />
       <Festivals screen={screen} />

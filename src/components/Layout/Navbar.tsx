@@ -120,9 +120,6 @@ const Navbar = () => {
                   <h2 className="text-4xl text-hs-title font-title">
                     Hugh Stoddart
                   </h2>
-                  <h3 className="text-xl text-hs-subtitle font-body">
-                    Screenwriter
-                  </h3>
                 </div>
               )}
 

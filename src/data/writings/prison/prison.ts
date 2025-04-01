@@ -1,6 +1,6 @@
-import nsu7Cover from "../../../assets/prison-imgs/not-shut-up-issue-7-cover.jpg";
-import nsuCover from "../../../assets/prison-imgs/not-shut-up.jpg";
-import nsu8Cover from "../../../assets/prison-imgs/not-shut-up-issue-8-cover.png";
+import nsu7Cover from "../../../assets/prison-imgs/NSU-7-cover.jpg";
+import nsu8Cover from "../../../assets/prison-imgs/NSU-8-cover.png";
+import nsu11Cover from "../../../assets/prison-imgs/NSU-11-cover.png";
 
 const residencyBackground =
   "In 1999-2001 Hugh held a 'residency' awarded by the Writers In Prison Network, spending two days a week at HMP Brixton. His main project was to use themes to link the inmates' work to published writing: he produced a series of anthologies of creative writing – these included excerpts from published authors but mostly writing by the inmates themselves. It became a shared forum.";
@@ -28,5 +28,5 @@ export const prisonInfo: IPrisonArticle = {
     interviewSeries,
     publicationLegacy,
   ],
-  images: [nsu7Cover, nsu8Cover, nsuCover],
+  images: [nsu7Cover, nsu8Cover, nsu11Cover],
 };

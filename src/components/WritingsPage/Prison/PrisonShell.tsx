@@ -39,14 +39,14 @@ const PrisonShell = () => {
         </h2>
       </div>
 
-      <div className="mt-8 md:mt-10 w-5/6 mx-auto text-hs-body font-medium font-body">
+      <div className="mt-8 md:mt-10 md:w-5/6 2xl:w-3/4 mx-auto text-hs-body font-medium font-body">
         {/*  Desktop layout */}
         <div className="hidden md:block text-justify text-lg leading-relaxed space-y-6">
           <div className="px-12 space-y-6 pb-3">
             <p>{txtConts[0]}</p>
             <p>{txtConts[1]}</p>
           </div>
-          <div className="flex gap-x-2">
+          <div className="flex md:gap-x-2 2xl:gap-x-10">
             {prisonInfo.images.map((_img, index) => (
               <div key={index} className="w-2/5">
                 <div className="h-[420px]">

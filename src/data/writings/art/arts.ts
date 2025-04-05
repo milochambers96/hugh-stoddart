@@ -53,14 +53,14 @@ export const artTexts: ArtTexts = {
         "LET ME SEE IF THIS BE REAL NAi Rotterdam, 1999. ISBN 90-5662-137-8",
       ],
     },
-    {
-      id: 4,
-      fName: "Siân",
-      lName: "Bowen",
-      type: "other",
-      purpose: "Commissioned prose work to accompany a suite of prints",
-      publishText: ["Grizedale Residency May 2000"],
-    },
+    // {
+    //   id: 4,
+    //   fName: "Siân",
+    //   lName: "Bowen",
+    //   type: "other",
+    //   purpose: "Commissioned prose work to accompany a suite of prints",
+    //   publishText: ["Grizedale Residency May 2000"],
+    // },
     {
       id: 5,
       fName: "Martin",

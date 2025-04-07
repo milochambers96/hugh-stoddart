@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import SEO from "../../Utility/SEO";
 
 import DualPillTab from "../../Utility/DualPillTab";
 import BackButton from "../../Utility/BackButton";
@@ -38,127 +39,152 @@ const ScreenplayItemShell = () => {
     getScreenplay();
   }, [getScreenplay]);
 
-  return (
-    <section className="pt-[90px] pb-20">
-      <div className="flex justify-end pr-6 pt-4">
-        <BackButton backUrl={"/Writings/Screenplays"} />
-      </div>
-      <div className="w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-10 2xl:mt-20">
-        <div className="relative">
-          {/* Title */}
-          <div className="text-center font-title">
-            <h1 className="text-3xl text-hs-title md:text-4xl font-bold">
-              {screenItem?.title}
-            </h1>
-            {screenItem && (
-              <div className="mx-auto text-center text-hs-subtitle mt-2">
-                <DetailsSubtitle screen={screenItem} />
-              </div>
-            )}
-          </div>
+  const baseUrl = "https://hughstoddart.co.uk";
 
-          {/* Navigation buttons positioned absolutely */}
-          <div
-            className="hidden sm:flex justify-between items-center w-full absolute font-interactive"
-            style={{ top: "50%", transform: "translateY(-50%)" }}
-          >
-            <PreviousButton screenIdNum={screenIdNum} />
-            <NextButton screenIdNum={screenIdNum} />
+  return (
+    <>
+      {screenItem && (
+        <SEO
+          title={`${screenItem.title} - Hugh Stoddart`}
+          description={
+            screenItem.synopsis ||
+            `${screenItem.title} - ${screenItem.type} written by Hugh Stoddart (${screenItem.year})`
+          }
+          imageUrl={`/assets/screenplay-imgs/${screenItem.media.image
+            .split("/")
+            .pop()}`}
+          url={`${baseUrl}/Writings/Screenplays/${screenItem.id}`}
+          type="article"
+          keywords={`Hugh Stoddart, ${screenItem.title}, ${
+            screenItem.type
+          }, screenplay, ${screenItem.year}${
+            screenItem.cast ? ", " + screenItem.cast.join(", ") : ""
+          }`}
+          includeAllWorks={false}
+        />
+      )}
+
+      <section className="pt-[90px] pb-20">
+        <div className="flex justify-end pr-6 pt-4">
+          <BackButton backUrl={"/Writings/Screenplays"} />
+        </div>
+        <div className="w-5/6 md:w-3/4 2xl:w-3/5 mx-auto mt-4 md:mt-10 2xl:mt-20">
+          <div className="relative">
+            {/* Title */}
+            <div className="text-center font-title">
+              <h1 className="text-3xl text-hs-title md:text-4xl font-bold">
+                {screenItem?.title}
+              </h1>
+              {screenItem && (
+                <div className="mx-auto text-center text-hs-subtitle mt-2">
+                  <DetailsSubtitle screen={screenItem} />
+                </div>
+              )}
+            </div>
+
+            {/* Navigation buttons positioned absolutely */}
+            <div
+              className="hidden sm:flex justify-between items-center w-full absolute font-interactive"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            >
+              <PreviousButton screenIdNum={screenIdNum} />
+              <NextButton screenIdNum={screenIdNum} />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile navigation - visible only on smallest screens */}
-      <div className="flex sm:hidden justify-between w-5/6 mx-auto mt-6 font-interactive">
-        <PreviousButton screenIdNum={screenIdNum} />
-        <NextButton screenIdNum={screenIdNum} />
-      </div>
+        {/* Mobile navigation - visible only on smallest screens */}
+        <div className="flex sm:hidden justify-between w-5/6 mx-auto mt-6 font-interactive">
+          <PreviousButton screenIdNum={screenIdNum} />
+          <NextButton screenIdNum={screenIdNum} />
+        </div>
 
-      {/* Desktop layout */}
-      <div className="hidden md:block">
-        <div className="mt-6 md:w-3/4 2xl:w-3/5 mx-auto">
-          <div className="flex justify-between gap-x-10 relative">
-            {/* Text column */}
-            <div className="flex-1 leading-relaxed px-2 text-hs-body">
-              <div className="mt-2 py-2 flex justify-center mb-2 font-interactive">
-                <DualPillTab
-                  display={display}
-                  setDisplay={setDisplay}
-                  option1={"overview"}
-                  option2={"credits"}
-                />
+        {/* Desktop layout */}
+        <div className="hidden md:block">
+          <div className="mt-6 md:w-3/4 2xl:w-3/5 mx-auto">
+            <div className="flex justify-between gap-x-10 relative">
+              {/* Text column */}
+              <div className="flex-1 leading-relaxed px-2 text-hs-body">
+                <div className="mt-2 py-2 flex justify-center mb-2 font-interactive">
+                  <DualPillTab
+                    display={display}
+                    setDisplay={setDisplay}
+                    option1={"overview"}
+                    option2={"credits"}
+                  />
+                </div>
+                <div className="font-body text-hs-body text-medium">
+                  {screenItem && display === "overview" && (
+                    <Overview screen={screenItem} />
+                  )}
+                  {screenItem && display === "credits" && (
+                    <>
+                      <Credits screen={screenItem} />
+                      <ArtCredits screen={screenItem} />
+                    </>
+                  )}
+                </div>
               </div>
-              <div className="font-body text-hs-body text-medium">
-                {screenItem && display === "overview" && (
-                  <Overview screen={screenItem} />
-                )}
-                {screenItem && display === "credits" && (
-                  <>
-                    <Credits screen={screenItem} />
-                    <ArtCredits screen={screenItem} />
-                  </>
+
+              {/* Media column */}
+              <div className="flex-2 self-start sticky top-[40%]">
+                {screenItem && screenItem.media && (
+                  <MediaDisplay
+                    media={{
+                      hasVideo: screenItem.media.hasVideo ?? false,
+                      image: screenItem.media.image,
+                      videoPath: screenItem.media.videoPath ?? "",
+                    }}
+                    title={screenItem.title}
+                  />
                 )}
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Media column */}
-            <div className="flex-2 self-start sticky top-[40%]">
+        {/* Mobile layout - image first, then content */}
+        <div className="md:hidden">
+          <div className="w-5/6 mx-auto">
+            {/* Media section */}
+            <div className="mt-8 flex justify-center">
               {screenItem && screenItem.media && (
-                <MediaDisplay
-                  media={{
-                    hasVideo: screenItem.media.hasVideo ?? false,
-                    image: screenItem.media.image,
-                    videoPath: screenItem.media.videoPath ?? "",
-                  }}
-                  title={screenItem.title}
-                />
+                <div className="max-w-full">
+                  <MediaDisplay
+                    media={{
+                      hasVideo: screenItem.media.hasVideo ?? false,
+                      image: screenItem.media.image,
+                      videoPath: screenItem.media.videoPath ?? "",
+                    }}
+                    title={screenItem.title}
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Tabs */}
+            <div className="mt-8 py-2 flex justify-center font-interactive">
+              <DualPillTab
+                display={display}
+                setDisplay={setDisplay}
+                option1={"overview"}
+                option2={"credits"}
+              />
+            </div>
+
+            {/* Content */}
+            <div className="mt-4 text-hs-body font-body">
+              {screenItem && display === "overview" && (
+                <Overview screen={screenItem} />
+              )}
+              {screenItem && display === "credits" && (
+                <Credits screen={screenItem} />
               )}
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Mobile layout - image first, then content */}
-      <div className="md:hidden">
-        <div className="w-5/6 mx-auto">
-          {/* Media section */}
-          <div className="mt-8 flex justify-center">
-            {screenItem && screenItem.media && (
-              <div className="max-w-full">
-                <MediaDisplay
-                  media={{
-                    hasVideo: screenItem.media.hasVideo ?? false,
-                    image: screenItem.media.image,
-                    videoPath: screenItem.media.videoPath ?? "",
-                  }}
-                  title={screenItem.title}
-                />
-              </div>
-            )}
-          </div>
-
-          {/* Tabs */}
-          <div className="mt-8 py-2 flex justify-center font-interactive">
-            <DualPillTab
-              display={display}
-              setDisplay={setDisplay}
-              option1={"overview"}
-              option2={"credits"}
-            />
-          </div>
-
-          {/* Content */}
-          <div className="mt-4 text-hs-body font-body">
-            {screenItem && display === "overview" && (
-              <Overview screen={screenItem} />
-            )}
-            {screenItem && display === "credits" && (
-              <Credits screen={screenItem} />
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

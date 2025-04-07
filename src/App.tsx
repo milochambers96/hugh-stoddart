@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 import "./App.css";
 
@@ -17,31 +18,31 @@ import ContactShell from "./components/ContactPage/ContactShell";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <ScrollToTop />
-      {/* <div className="bg-hs-background min-h-screen"> */}
-      <Background>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Writings" element={<WritingsShell />} />
-          <Route path="/Writings/Screenplays" element={<ScreenplayShell />} />
-          <Route
-            path="/Writings/Screenplays/:id"
-            element={<ScreenplayItemShell />}
-          />
-          <Route path="/Writings/Theatre" element={<TheatreShell />} />
-          <Route path="/Writings/TheArts" element={<ArtsShell />} />
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+        <ScrollToTop />
+        <Background>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Writings" element={<WritingsShell />} />
+            <Route path="/Writings/Screenplays" element={<ScreenplayShell />} />
+            <Route
+              path="/Writings/Screenplays/:id"
+              element={<ScreenplayItemShell />}
+            />
+            <Route path="/Writings/Theatre" element={<TheatreShell />} />
+            <Route path="/Writings/TheArts" element={<ArtsShell />} />
 
-          <Route path="/Writings/Prison" element={<PrisonShell />} />
+            <Route path="/Writings/Prison" element={<PrisonShell />} />
 
-          <Route path="/About" element={<AboutShell />} />
+            <Route path="/About" element={<AboutShell />} />
 
-          <Route path="/Contact" element={<ContactShell />} />
-        </Routes>
-      </Background>
-      {/* </div> */}
-    </Router>
+            <Route path="/Contact" element={<ContactShell />} />
+          </Routes>
+        </Background>
+      </Router>
+    </HelmetProvider>
   );
 }
 

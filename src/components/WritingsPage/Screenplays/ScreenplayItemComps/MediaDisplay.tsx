@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRef, useEffect, useState } from "react";
 
 interface MediaDisplayProps {
@@ -14,7 +15,6 @@ const MediaDisplay = ({ media, title }: MediaDisplayProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<any>(null);
   const videoIdRef = useRef<string | null>(null);
-  const [showPlaceholder, setShowPlaceholder] = useState(false);
 
   // Extract Vimeo ID from path
   useEffect(() => {
@@ -47,6 +47,7 @@ const MediaDisplay = ({ media, title }: MediaDisplayProps) => {
     return () => {
       if (playerRef.current) {
         playerRef.current.destroy();
+        playerRef.current = null;
       }
     };
   }, [media.hasVideo, media.videoPath]);
@@ -55,46 +56,41 @@ const MediaDisplay = ({ media, title }: MediaDisplayProps) => {
   useEffect(() => {
     if (!vimeoReady || !containerRef.current || !videoIdRef.current) return;
 
-    // Hide any placeholder that might be showing
-    setShowPlaceholder(false);
+    // Clear container first to prevent duplicates
+    if (containerRef.current) {
+      containerRef.current.innerHTML = "";
+    }
+
+    // Destroy existing player if any
+    if (playerRef.current) {
+      playerRef.current.destroy();
+      playerRef.current = null;
+    }
 
     try {
+      // Create a single iframe element for Vimeo to use
+      const iframe = document.createElement("iframe");
+      containerRef.current.appendChild(iframe);
+
       // Create player with options
-      playerRef.current = new (window as any).Vimeo.Player(
-        containerRef.current,
-        {
-          id: parseInt(videoIdRef.current),
-          width: 640,
-          height: 360,
-          title: false,
-          byline: false,
-          portrait: false,
-          transparent: false,
-          allowfullscreen: true,
-          autopause: false,
-          background: false,
-          playsinline: true,
-        }
-      );
+      playerRef.current = new (window as any).Vimeo.Player(iframe, {
+        id: parseInt(videoIdRef.current),
+        width: 640,
+        height: 360,
+        title: false,
+        byline: false,
+        portrait: false,
+        transparent: false,
+        allowfullscreen: true,
+      });
 
       // Special Safari fullscreen handling
       const isSafari = /^((?!chrome|android).)*safari/i.test(
         navigator.userAgent
       );
       if (isSafari) {
-        // Pre-capture the poster image for smoother transition
-        let posterUrl = "";
-        playerRef.current
-          .getVideoThumbnail()
-          .then((thumbnail: any) => {
-            if (thumbnail && thumbnail.url) {
-              posterUrl = thumbnail.url;
-            }
-          })
-          .catch(() => {
-            // Use provided image as fallback
-            posterUrl = media.image;
-          });
+        // Store the original iframe for reference
+        const originalIframe = iframe;
 
         // Safari-specific fullscreen handler
         const handleFullscreenChange = () => {
@@ -103,67 +99,79 @@ const MediaDisplay = ({ media, title }: MediaDisplayProps) => {
             !!(document as any).webkitFullscreenElement;
 
           if (!isFullscreen && playerRef.current) {
-            let currentTime = 0;
-            let isPlaying = false;
+            // Capture time so we can restore it
+            playerRef.current.getCurrentTime().then((time: number) => {
+              // Capture playing state
+              playerRef.current.getPaused().then((paused: boolean) => {
+                const wasPlaying = !paused;
 
-            // Get current state before destroying
-            playerRef.current
-              .getCurrentTime()
-              .then((time: number) => {
-                currentTime = time;
-                return playerRef.current.getPaused();
-              })
-              .then((paused: boolean) => {
-                isPlaying = !paused;
+                // Create temporary overlay
+                if (containerRef.current) {
+                  const overlay = document.createElement("div");
+                  overlay.style.position = "absolute";
+                  overlay.style.top = "0";
+                  overlay.style.left = "0";
+                  overlay.style.width = "100%";
+                  overlay.style.height = "100%";
+                  overlay.style.backgroundColor = "#000";
+                  overlay.style.backgroundImage = `url(${media.image})`;
+                  overlay.style.backgroundSize = "contain";
+                  overlay.style.backgroundPosition = "center";
+                  overlay.style.backgroundRepeat = "no-repeat";
+                  overlay.style.zIndex = "10";
 
-                // Show placeholder to hide the transition
-                setShowPlaceholder(true);
+                  // Add overlay to container
+                  containerRef.current.style.position = "relative";
+                  containerRef.current.appendChild(overlay);
 
-                // On Safari, we need to recreate the player
-                setTimeout(() => {
-                  if (!containerRef.current || !videoIdRef.current) return;
-
-                  // Destroy existing player
-                  if (playerRef.current) {
-                    playerRef.current.destroy();
-                  }
-
-                  // Clear container
-                  containerRef.current.innerHTML = "";
-
-                  // Create a new player
-                  playerRef.current = new (window as any).Vimeo.Player(
-                    containerRef.current,
-                    {
-                      id: parseInt(videoIdRef.current),
-                      width: 640,
-                      height: 360,
-                      title: false,
-                      byline: false,
-                      portrait: false,
-                      transparent: false,
-                      allowfullscreen: true,
-                      autopause: false,
-                      background: false,
-                      playsinline: true,
+                  // After a small delay, recreate the player
+                  setTimeout(() => {
+                    // Remove the original iframe and overlay
+                    if (originalIframe.parentNode) {
+                      originalIframe.parentNode.removeChild(originalIframe);
                     }
-                  );
 
-                  // Restore position and play state
-                  playerRef.current.setCurrentTime(currentTime).then(() => {
-                    if (isPlaying) {
-                      playerRef.current.play().then(() => {
-                        // Hide placeholder after player is playing
-                        setTimeout(() => {
-                          setShowPlaceholder(false);
-                        }, 100);
-                      });
-                    } else {
-                      setShowPlaceholder(false);
+                    if (overlay.parentNode) {
+                      overlay.parentNode.removeChild(overlay);
                     }
-                  });
-                }, 100);
+
+                    // Destroy the old player
+                    if (playerRef.current) {
+                      playerRef.current.destroy();
+                      playerRef.current = null;
+                    }
+
+                    // Create a new iframe
+                    const newIframe = document.createElement("iframe");
+                    if (containerRef.current) {
+                      containerRef.current.appendChild(newIframe);
+                    }
+
+                    // Create a new player
+                    playerRef.current = new (window as any).Vimeo.Player(
+                      newIframe,
+                      {
+                        id: parseInt(videoIdRef.current as string),
+                        width: 640,
+                        height: 360,
+                        title: false,
+                        byline: false,
+                        portrait: false,
+                        transparent: false,
+                        allowfullscreen: true,
+                      }
+                    );
+
+                    // Set the playback position and resume if needed
+                    playerRef.current.setCurrentTime(time).then(() => {
+                      if (wasPlaying) {
+                        playerRef.current.play();
+                      }
+                    });
+                  }, 200);
+                }
               });
+            });
           }
         };
 
@@ -205,42 +213,15 @@ const MediaDisplay = ({ media, title }: MediaDisplayProps) => {
   if (media.hasVideo && media.videoPath) {
     return (
       <div
+        ref={containerRef}
+        className="vimeo-container"
         style={{
-          position: "relative",
           width: "640px",
           maxWidth: "100%",
           height: "360px",
+          background: "#000",
         }}
-      >
-        <div
-          ref={containerRef}
-          className="vimeo-container"
-          style={{
-            width: "100%",
-            height: "100%",
-            background: "#000",
-          }}
-        ></div>
-
-        {/* Placeholder to hide transition */}
-        {showPlaceholder && (
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              background: "#000",
-              backgroundImage: `url(${media.image})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              zIndex: 10,
-            }}
-          />
-        )}
-      </div>
+      ></div>
     );
   } else {
     return (

@@ -84,7 +84,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article in The Independent.",
       publishText: [
-        "Tate Gallery March 2 - June 13 1999",
+        "Tate Gallery March 2 - June 13 1999 ",
         "Book review, Art World, Feb-Mar 2009",
       ],
       pdf: chrisBurden,

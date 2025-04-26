@@ -83,7 +83,10 @@ export const artTexts: ArtTexts = {
       lName: "Burden",
       type: "article",
       purpose: "Article in The Independent.",
-      publishText: ["Grizedale Residency May 2000"],
+      publishText: [
+        "Tate Gallery March 2 - June 13 1999",
+        "Book review, Art World, Feb-Mar 2009",
+      ],
       pdf: chrisBurden,
     },
     {

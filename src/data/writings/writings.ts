@@ -1,6 +1,6 @@
 import screenImg from "../../assets/screenplay-imgs/mill-on-the-floss-img.jpg";
 import theatreImg from "../../assets/writing-page-imgs/gibaltar-straight-img.jpg";
-import visualArtImg from "../../assets/screenplay-imgs/big-bittalions-img.jpg";
+import visualArtImg from "../../assets/writing-page-imgs/cornelia-parker.jpg";
 import notShutUpImg from "../../assets/writing-page-imgs/not-shut-up-issue-7.jpg";
 
 export const writingsIntro =

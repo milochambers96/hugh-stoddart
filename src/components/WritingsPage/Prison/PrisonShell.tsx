@@ -80,7 +80,7 @@ const PrisonShell = () => {
             </div>
           </div>
 
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-6 px-6">
             {txtConts.map((text, index) => (
               <div key={index} className="text-justify">
                 {formatForMobile(text, index)}

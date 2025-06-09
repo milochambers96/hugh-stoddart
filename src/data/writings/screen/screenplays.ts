@@ -509,7 +509,7 @@ export const screenplays: Screenplay[] = [
             type: "Purchase",
             message: "Hardcopies are available to purchase from",
             "link-text": "Amazon",
-            link: "https://shop.bfi.org.uk/remembrance-flipside-048-blu-ray.html?srsltid=AfmBOop6OKoKiQKijmZEVgNyDEuG3yi5yYIhIHnRHGg6dKp6e-opC74w",
+            link: "https://www.amazon.co.uk/Mill-Floss-DVD-Emily-Watson/dp/B000CIWXGE",
           },
         ],
       },

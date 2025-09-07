@@ -1,15 +1,23 @@
 import alisonWilding from "./articles/alison_wilding.pdf";
+import carlAndre from "./articles/carl_andre.pdf";
 import chrisBurden from "./articles/chris_burden.pdf";
 import corneliaParker from "./articles/cornelia_parker.pdf";
 import davidNash from "./articles/david_nash.pdf";
 import enoPaladino from "./articles/eno_paladino.pdf";
+import georgeBlacklock from "./articles/george_blacklock.pdf";
 import helenSear from "./articles/helen_sear.pdf";
 import jackieWinsor from "./articles/jackie_winsor.pdf";
 import martinBoyce from "./articles/martin_boyce.pdf";
 import mikeNelson from "./articles/mike_nelson.pdf";
+import panamarenko from "./articles/PANAMARENKO.pdf";
 import peterKennard from "./articles/peter_kennard.pdf";
+import ronHaselden from "./articles/ron_haselden.pdf";
+import rosemaryButcher from "./articles/rosemary_butcher .pdf";
 import seanScully from "./articles/sean_scully.pdf";
+import stephenChambers from "./articles/stephen_chambers.pdf";
 import terryFrost from "./articles/terry_frost.pdf";
+import tonyOMalley from "./articles/tony_o’malley.pdf";
+import trevorSutton from "./articles/trevor_sutton.pdf";
 
 export interface ArtText {
   id: number;
@@ -34,6 +42,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article in The Independent",
       publishText: ["Whitechapel Gallery July 7 | August 27 2000"],
+      pdf: carlAndre,
     },
     {
       id: 2,
@@ -42,17 +51,18 @@ export const artTexts: ArtTexts = {
       type: "essay",
       purpose: "Catalogue essay | Solo show",
       publishText: ["Flowers Central | October 2003"],
+      pdf: georgeBlacklock,
     },
-    {
-      id: 3,
-      fName: "Ansuya",
-      lName: "Blom",
-      type: "review",
-      purpose: "Book Review for Contemporary Visual Arts no.30 2000",
-      publishText: [
-        "LET ME SEE IF THIS BE REAL NAi Rotterdam, 1999. ISBN 90-5662-137-8",
-      ],
-    },
+    // {
+    //   id: 3,
+    //   fName: "Ansuya",
+    //   lName: "Blom",
+    //   type: "review",
+    //   purpose: "Book Review for Contemporary Visual Arts no.30 2000",
+    //   publishText: [
+    //     "LET ME SEE IF THIS BE REAL NAi Rotterdam, 1999. ISBN 90-5662-137-8",
+    //   ],
+    // },
     // {
     //   id: 4,
     //   fName: "Siân",
@@ -70,13 +80,13 @@ export const artTexts: ArtTexts = {
       publishText: ["Lotte Hammer Gallery London, 29 January - 6 March"],
       pdf: martinBoyce,
     },
-    {
-      id: 6,
-      fName: "Ian",
-      lName: "Breakwell",
-      type: "review",
-      purpose: "Review for Frieze Nov/Dec 1999 Auditorium",
-    },
+    // {
+    //   id: 6,
+    //   fName: "Ian",
+    //   lName: "Breakwell",
+    //   type: "review",
+    //   purpose: "Review for Frieze Nov/Dec 1999 Auditorium",
+    // },
     {
       id: 7,
       fName: "Chris",
@@ -98,6 +108,7 @@ export const artTexts: ArtTexts = {
       publishText: [
         "Collisions and Collaborations Middlesex University Press ISBN: 1 904750 47 8",
       ],
+      pdf: rosemaryButcher,
     },
     {
       id: 10,
@@ -106,6 +117,7 @@ export const artTexts: ArtTexts = {
       type: "review",
       purpose: "Review for Contemporary Visual Arts no 21 1998",
       publishText: ["Kettles Yard, Cambridge September 26 - November 1"],
+      pdf: stephenChambers,
     },
     {
       id: 11,
@@ -116,14 +128,14 @@ export const artTexts: ArtTexts = {
       publishText: ["Roundhouse, London September 9 - October 6"],
       pdf: enoPaladino,
     },
-    {
-      id: 12,
-      fName: "Noel",
-      lName: "Forster",
-      type: "essay",
-      purpose: "Catalogue essay 'Meridiano de Greenwich'",
-      publishText: ["Madrid / London May 2002"],
-    },
+    // {
+    //   id: 12,
+    //   fName: "Noel",
+    //   lName: "Forster",
+    //   type: "essay",
+    //   purpose: "Catalogue essay 'Meridiano de Greenwich'",
+    //   publishText: ["Madrid / London May 2002"],
+    // },
     {
       id: 13,
       fName: "Terry",
@@ -139,6 +151,7 @@ export const artTexts: ArtTexts = {
       lName: "Haselden",
       type: "review",
       purpose: "Review for Art & Architecture no 53 1999",
+      pdf: ronHaselden,
     },
     {
       id: 15,
@@ -149,13 +162,13 @@ export const artTexts: ArtTexts = {
       publishText: ["Published by Manchester University Press"],
       pdf: peterKennard,
     },
-    {
-      id: 16,
-      fName: "Sharon",
-      lName: "Kivland",
-      type: "review",
-      purpose: "Book review for Contemporary Visual Arts no.26 2000",
-    },
+    // {
+    //   id: 16,
+    //   fName: "Sharon",
+    //   lName: "Kivland",
+    //   type: "review",
+    //   purpose: "Book review for Contemporary Visual Arts no.26 2000",
+    // },
     {
       id: 17,
       fName: "David",
@@ -182,6 +195,7 @@ export const artTexts: ArtTexts = {
       type: "essay",
       purpose: "Contributing essay in book edited by Brian Lynch",
       publishText: ["Published by Scolar Press ISBN-10: 1859282350"],
+      pdf: tonyOMalley,
     },
     {
       id: 20,
@@ -189,6 +203,7 @@ export const artTexts: ArtTexts = {
       type: "article",
       purpose: "Article for the Independent",
       publishText: ["Hayward Gallery February 10 – April 2 2000"],
+      pdf: panamarenko,
     },
     {
       id: 21,
@@ -223,6 +238,7 @@ export const artTexts: ArtTexts = {
       lName: "Sutton",
       type: "essay",
       purpose: "Catalogue essay Flowers East April 1998",
+      pdf: trevorSutton,
     },
     {
       id: 25,

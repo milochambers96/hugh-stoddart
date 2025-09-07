@@ -224,13 +224,13 @@ export const screenplays: Screenplay[] = [
             link: "https://plymouthartscinema.org/remembrance-a-film-that-will-mean-a-lot-to-anybody-from-plymouth/",
           },
 
-          {
-            type: "Purchase",
-            message:
-              "This film has been restored and is now available as a blu-ray from",
-            "link-text": "BFI Shop",
-            link: "https://shop.bfi.org.uk/remembrance-flipside-048-blu-ray.html?srsltid=AfmBOop6OKoKiQKijmZEVgNyDEuG3yi5yYIhIHnRHGg6dKp6e-opC74w",
-          },
+          // {
+          //   type: "Purchase",
+          //   message:
+          //     "This film has been restored and is now available as a blu-ray from",
+          //   "link-text": "BFI Shop",
+          //   link: "https://shop.bfi.org.uk/remembrance-flipside-048-blu-ray.html?srsltid=AfmBOop6OKoKiQKijmZEVgNyDEuG3yi5yYIhIHnRHGg6dKp6e-opC74w",
+          // },
         ],
       },
     },
